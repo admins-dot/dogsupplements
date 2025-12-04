@@ -10,6 +10,7 @@ import ProductDetail from "./pages/ProductDetail";
 import About from "./pages/About";
 import Auth from "./pages/Auth";
 import Account from "./pages/Account";
+import Membership from "./pages/Membership";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/account" element={<Account />} />
+            <Route path="/membership" element={<Membership />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
