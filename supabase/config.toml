@@ -1,1 +1,7 @@
 project_id = "fegidqhskcgladbovxjz"
+
+[functions.send-purchase-confirmation]
+verify_jwt = false
+
+[functions.send-subscription-reminder]
+verify_jwt = false
