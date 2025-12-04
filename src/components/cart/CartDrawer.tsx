@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/sheet";
 import { ShoppingCart, Minus, Plus, Trash2, ExternalLink, Loader2 } from "lucide-react";
 import { useCartStore } from "@/stores/cartStore";
+import { useAuth } from "@/hooks/useAuth";
+import { sendPurchaseConfirmation } from "@/lib/emailService";
 import { toast } from "sonner";
 
 export const CartDrawer = () => {
@@ -20,7 +22,9 @@ export const CartDrawer = () => {
     removeItem, 
     createCheckout,
     getTotalPrice,
+    clearCart,
   } = useCartStore();
+  const { user } = useAuth();
   
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
   const totalPrice = getTotalPrice();
@@ -29,8 +33,38 @@ export const CartDrawer = () => {
     try {
       const checkoutUrl = await createCheckout();
       if (checkoutUrl) {
+        // Send purchase confirmation email if user is logged in
+        if (user?.email) {
+          const purchaseItems = items.map(item => ({
+            title: item.product.node.title,
+            variantTitle: item.variantTitle !== 'Default Title' ? item.variantTitle : undefined,
+            quantity: item.quantity,
+            price: parseFloat(item.price.amount),
+          }));
+
+          const subtotal = items.reduce((sum, item) => 
+            sum + (parseFloat(item.price.amount) * item.quantity), 0
+          );
+
+          // Send email in background - don't block checkout
+          sendPurchaseConfirmation({
+            email: user.email,
+            customerName: user.user_metadata?.full_name || 'Valued Customer',
+            items: purchaseItems,
+            subtotal,
+            total: totalPrice,
+          }).catch(err => console.error('Email send failed:', err));
+        }
+
         window.open(checkoutUrl, '_blank');
         setOpen(false);
+        
+        // Clear cart after successful checkout
+        clearCart();
+        
+        toast.success("Redirecting to checkout...", {
+          description: user?.email ? "A confirmation email will be sent to you." : undefined,
+        });
       } else {
         toast.error("Failed to create checkout. Please try again.");
       }
