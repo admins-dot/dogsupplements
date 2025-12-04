@@ -1,22 +1,33 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { ShopifyProduct, fetchProducts } from "@/lib/shopify";
 import { useCartStore, CartItem } from "@/stores/cartStore";
+import { useMembership, MEMBERSHIP_DISCOUNT, SUBSCRIPTION_DISCOUNT } from "@/hooks/useMembership";
+import { useProductSubscriptions, SubscriptionFrequency } from "@/hooks/useProductSubscriptions";
+import { useAuth } from "@/hooks/useAuth";
+import { SubscriptionOptions } from "@/components/product/SubscriptionOptions";
 import { toast } from "sonner";
 import { Loader2, ShoppingBag, ArrowLeft, Shield, Truck, RefreshCcw } from "lucide-react";
 import heroProduct from "@/assets/hero-product.jpg";
 
 const ProductDetail = () => {
   const { handle } = useParams<{ handle: string }>();
+  const navigate = useNavigate();
   const [product, setProduct] = useState<ShopifyProduct | null>(null);
   const [loading, setLoading] = useState(true);
   const [selectedVariantIndex, setSelectedVariantIndex] = useState(0);
+  const [purchaseType, setPurchaseType] = useState<'one-time' | 'subscribe'>('one-time');
+  const [selectedFrequency, setSelectedFrequency] = useState<SubscriptionFrequency>('monthly');
+  
   const addItem = useCartStore(state => state.addItem);
   const setCartOpen = useCartStore(state => state.setOpen);
+  const { user } = useAuth();
+  const { isMember } = useMembership();
+  const { createSubscription } = useProductSubscriptions();
 
   useEffect(() => {
     const loadProduct = async () => {
@@ -34,25 +45,78 @@ const ProductDetail = () => {
     loadProduct();
   }, [handle]);
 
-  const handleAddToCart = () => {
+  const handleAddToCart = async () => {
     if (!product) return;
     const variant = product.node.variants.edges[selectedVariantIndex]?.node;
     if (!variant) return;
 
-    const cartItem: CartItem = {
-      product,
-      variantId: variant.id,
-      variantTitle: variant.title,
-      price: variant.price,
-      quantity: 1,
-      selectedOptions: variant.selectedOptions || [],
-    };
+    const basePrice = parseFloat(variant.price.amount);
 
-    addItem(cartItem);
-    toast.success(`${product.node.title} added to cart`, {
-      position: "top-center",
-    });
-    setCartOpen(true);
+    if (purchaseType === 'subscribe') {
+      if (!user) {
+        toast.info('Please sign in to subscribe');
+        navigate('/auth');
+        return;
+      }
+
+      try {
+        await createSubscription({
+          productId: product.node.id,
+          variantId: variant.id,
+          productTitle: product.node.title,
+          variantTitle: variant.title,
+          frequency: selectedFrequency,
+          price: basePrice * (1 - SUBSCRIPTION_DISCOUNT / 100),
+        });
+
+        // Also add to cart with discounted price
+        const cartItem: CartItem = {
+          product,
+          variantId: variant.id,
+          variantTitle: variant.title,
+          price: {
+            amount: (basePrice * (1 - SUBSCRIPTION_DISCOUNT / 100)).toFixed(2),
+            currencyCode: variant.price.currencyCode,
+          },
+          quantity: 1,
+          selectedOptions: variant.selectedOptions || [],
+        };
+
+        addItem(cartItem);
+        toast.success(`Subscribed to ${product.node.title}!`, {
+          description: `${SUBSCRIPTION_DISCOUNT}% subscription discount applied.`,
+          position: "top-center",
+        });
+        setCartOpen(true);
+      } catch (error) {
+        console.error('Failed to create subscription:', error);
+        toast.error('Failed to create subscription');
+      }
+    } else {
+      // One-time purchase
+      const discountedPrice = isMember 
+        ? basePrice * (1 - MEMBERSHIP_DISCOUNT / 100) 
+        : basePrice;
+
+      const cartItem: CartItem = {
+        product,
+        variantId: variant.id,
+        variantTitle: variant.title,
+        price: {
+          amount: discountedPrice.toFixed(2),
+          currencyCode: variant.price.currencyCode,
+        },
+        quantity: 1,
+        selectedOptions: variant.selectedOptions || [],
+      };
+
+      addItem(cartItem);
+      toast.success(`${product.node.title} added to cart`, {
+        description: isMember ? `${MEMBERSHIP_DISCOUNT}% member discount applied!` : undefined,
+        position: "top-center",
+      });
+      setCartOpen(true);
+    }
   };
 
   if (loading) {
@@ -89,6 +153,7 @@ const ProductDetail = () => {
 
   const selectedVariant = product.node.variants.edges[selectedVariantIndex]?.node;
   const hasMultipleVariants = product.node.variants.edges.length > 1;
+  const basePrice = parseFloat(selectedVariant?.price.amount || "0");
 
   return (
     <>
@@ -126,7 +191,7 @@ const ProductDetail = () => {
                 </div>
 
                 {/* Product Info */}
-                <div className="space-y-8">
+                <div className="space-y-6">
                   <div>
                     <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                       {product.node.title}
@@ -134,18 +199,6 @@ const ProductDetail = () => {
                     <p className="text-lg text-muted-foreground leading-relaxed">
                       {product.node.description || "Premium daily supplement crafted with clean, science-backed ingredients for your dog's optimal health."}
                     </p>
-                  </div>
-
-                  {/* Price */}
-                  <div className="space-y-2">
-                    <div className="flex items-baseline gap-4">
-                      <span className="text-3xl font-bold text-foreground">
-                        ${parseFloat(selectedVariant?.price.amount || "0").toFixed(2)}
-                      </span>
-                      <span className="text-lg text-secondary font-medium">
-                        Subscribe & save 20%
-                      </span>
-                    </div>
                   </div>
 
                   {/* Variants */}
@@ -167,6 +220,16 @@ const ProductDetail = () => {
                     </div>
                   )}
 
+                  {/* Subscription Options */}
+                  <SubscriptionOptions
+                    price={basePrice}
+                    isMember={isMember}
+                    purchaseType={purchaseType}
+                    selectedFrequency={selectedFrequency}
+                    onPurchaseTypeChange={setPurchaseType}
+                    onFrequencyChange={setSelectedFrequency}
+                  />
+
                   {/* Add to Cart */}
                   <Button
                     variant="hero"
@@ -176,8 +239,20 @@ const ProductDetail = () => {
                     disabled={!selectedVariant?.availableForSale}
                   >
                     <ShoppingBag className="mr-2 h-5 w-5" />
-                    Add to Cart
+                    {purchaseType === 'subscribe' ? 'Subscribe & Add to Cart' : 'Add to Cart'}
                   </Button>
+
+                  {/* Membership CTA */}
+                  {!isMember && purchaseType === 'one-time' && (
+                    <div className="p-4 rounded-xl bg-secondary/10 border border-secondary/20">
+                      <p className="text-sm text-foreground">
+                        <Link to="/membership" className="font-semibold text-secondary hover:underline">
+                          Join Membership
+                        </Link>{' '}
+                        to save {MEMBERSHIP_DISCOUNT}% on all one-time purchases
+                      </p>
+                    </div>
+                  )}
 
                   {/* Trust badges */}
                   <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border">

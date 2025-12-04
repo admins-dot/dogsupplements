@@ -14,6 +14,93 @@ export type Database = {
   }
   public: {
     Tables: {
+      memberships: {
+        Row: {
+          cancelled_at: string | null
+          created_at: string
+          discount_percentage: number
+          id: string
+          price_per_month: number
+          started_at: string
+          status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          cancelled_at?: string | null
+          created_at?: string
+          discount_percentage?: number
+          id?: string
+          price_per_month?: number
+          started_at?: string
+          status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          cancelled_at?: string | null
+          created_at?: string
+          discount_percentage?: number
+          id?: string
+          price_per_month?: number
+          started_at?: string
+          status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      product_subscriptions: {
+        Row: {
+          created_at: string
+          discount_percentage: number
+          frequency: Database["public"]["Enums"]["subscription_frequency"]
+          id: string
+          last_delivery_at: string | null
+          next_delivery_at: string
+          price: number
+          product_id: string
+          product_title: string
+          status: string
+          updated_at: string
+          user_id: string
+          variant_id: string
+          variant_title: string | null
+        }
+        Insert: {
+          created_at?: string
+          discount_percentage?: number
+          frequency?: Database["public"]["Enums"]["subscription_frequency"]
+          id?: string
+          last_delivery_at?: string | null
+          next_delivery_at: string
+          price: number
+          product_id: string
+          product_title: string
+          status?: string
+          updated_at?: string
+          user_id: string
+          variant_id: string
+          variant_title?: string | null
+        }
+        Update: {
+          created_at?: string
+          discount_percentage?: number
+          frequency?: Database["public"]["Enums"]["subscription_frequency"]
+          id?: string
+          last_delivery_at?: string | null
+          next_delivery_at?: string
+          price?: number
+          product_id?: string
+          product_title?: string
+          status?: string
+          updated_at?: string
+          user_id?: string
+          variant_id?: string
+          variant_title?: string | null
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           address_line1: string | null
@@ -73,7 +160,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      subscription_frequency: "1_week" | "2_weeks" | "3_weeks" | "monthly"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -200,6 +287,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      subscription_frequency: ["1_week", "2_weeks", "3_weeks", "monthly"],
+    },
   },
 } as const
