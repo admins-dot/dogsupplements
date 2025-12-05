@@ -56,7 +56,7 @@ const Membership = () => {
     <>
       <Helmet>
         <title>Membership | VitalCanine</title>
-        <meta name="description" content="Join VitalCanine Membership and save 15% on all premium dog supplements." />
+        <meta name="description" content="Join VitalCanine Membership and save 20% on all premium dog supplements." />
       </Helmet>
 
       <div className="min-h-screen flex flex-col">

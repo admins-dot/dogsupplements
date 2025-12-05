@@ -13,7 +13,7 @@ export interface Membership {
 }
 
 export const MEMBERSHIP_PRICE = 14.99;
-export const MEMBERSHIP_DISCOUNT = 15;
+export const MEMBERSHIP_DISCOUNT = 20;
 export const SUBSCRIPTION_DISCOUNT = 20;
 
 export const useMembership = () => {
