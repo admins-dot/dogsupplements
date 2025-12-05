@@ -2,10 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroProduct from "@/assets/hero-product.jpg";
-
 export const Hero = () => {
-  return (
-    <section className="relative overflow-hidden">
+  return <section className="relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/30" />
       
@@ -71,11 +69,7 @@ export const Hero = () => {
               {/* Glow effect */}
               <div className="absolute inset-0 bg-secondary/20 rounded-full blur-3xl scale-75" />
               
-              <img
-                src={heroProduct}
-                alt="VitalCanine premium dog supplements in amber glass jar"
-                className="relative z-10 w-full h-full object-cover rounded-3xl shadow-elevated"
-              />
+              <img alt="VitalCanine premium dog supplements in amber glass jar" className="relative z-10 w-full h-full object-cover rounded-3xl shadow-elevated" src="/lovable-uploads/dba23531-4bba-4319-af0f-6d06c6d8b410.png" />
               
               {/* Floating badge */}
               <div className="absolute -bottom-4 -left-4 bg-card rounded-2xl p-4 shadow-medium border border-border/50 z-20">
@@ -86,6 +80,5 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
