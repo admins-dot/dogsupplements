@@ -74,7 +74,7 @@ export const Hero = () => {
               {/* Floating badge */}
               <div className="absolute -bottom-4 -left-4 bg-card rounded-2xl p-4 shadow-medium border border-border/50 z-20">
                 <p className="text-xs text-muted-foreground">Subscribe & Save</p>
-                <p className="text-lg font-bold text-secondary">Up to 25% Off</p>
+                <p className="text-lg font-bold text-secondary">Up to 20% Off</p>
               </div>
             </div>
           </div>
