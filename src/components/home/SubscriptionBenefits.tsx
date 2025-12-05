@@ -35,8 +35,8 @@ export const SubscriptionBenefits = () => {
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary-foreground/10 text-secondary mb-4">
                 <benefit.icon className="h-6 w-6" />
               </div>
-              <h3 className="font-semibold mb-2">{benefit.title}</h3>
-              <p className="text-sm text-primary-foreground/70">{benefit.description}</p>
+              <h3 className="font-semibold mb-2 text-primary-foreground">{benefit.title}</h3>
+              <p className="text-sm text-primary-foreground/80">{benefit.description}</p>
             </div>)}
         </div>
       </div>
