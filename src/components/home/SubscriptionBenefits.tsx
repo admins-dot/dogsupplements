@@ -9,7 +9,7 @@ const benefits = [{
   description: "No commitment, pause or cancel whenever"
 }, {
   icon: Percent,
-  title: "Save Up to 25%",
+  title: "Save Up to 20%",
   description: "Exclusive subscriber pricing"
 }, {
   icon: Star,
