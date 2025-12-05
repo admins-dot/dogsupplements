@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 export const FinalCTA = () => {
-  return (
-    <section className="section-padding">
+  return <section className="section-padding">
       <div className="container-narrow mx-auto">
         <div className="relative bg-card rounded-3xl p-12 md:p-16 text-center overflow-hidden">
           {/* Background decoration */}
@@ -23,7 +21,7 @@ export const FinalCTA = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="xl" asChild>
                 <Link to="/shop">
-                  Subscribe & Save 25%
+                  Subscribe &amp; Save 20%
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -35,6 +33,5 @@ export const FinalCTA = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
