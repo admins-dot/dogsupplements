@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SubscriptionManagement } from "@/components/account/SubscriptionManagement";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
@@ -386,19 +387,10 @@ const Account = () => {
                 <div className="card-elevated p-6 md:p-8">
                   <div className="flex items-center gap-3 mb-6">
                     <CreditCard className="h-5 w-5 text-secondary" />
-                    <h2 className="text-xl font-semibold text-foreground">Subscription</h2>
+                    <h2 className="text-xl font-semibold text-foreground">Subscriptions</h2>
                   </div>
                   
-                  <div className="text-center py-12">
-                    <CreditCard className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                    <h3 className="text-lg font-medium text-foreground mb-2">No active subscription</h3>
-                    <p className="text-muted-foreground mb-6">
-                      Subscribe to save up to 25% on every order and never run out.
-                    </p>
-                    <Button variant="gold" onClick={() => navigate("/shop")}>
-                      Start Subscription
-                    </Button>
-                  </div>
+                  <SubscriptionManagement />
                 </div>
               </TabsContent>
             </Tabs>
