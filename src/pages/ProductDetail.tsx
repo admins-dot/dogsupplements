@@ -7,9 +7,10 @@ import { Button } from "@/components/ui/button";
 import { ShopifyProduct, fetchProducts } from "@/lib/shopify";
 import { useCartStore, CartItem } from "@/stores/cartStore";
 import { useMembership, MEMBERSHIP_DISCOUNT, SUBSCRIPTION_DISCOUNT } from "@/hooks/useMembership";
-import { useProductSubscriptions, SubscriptionFrequency } from "@/hooks/useProductSubscriptions";
+import { useProductSubscriptions, SubscriptionFrequency, FREQUENCY_OPTIONS } from "@/hooks/useProductSubscriptions";
 import { useAuth } from "@/hooks/useAuth";
 import { SubscriptionOptions } from "@/components/product/SubscriptionOptions";
+import { sendPurchaseConfirmation } from "@/lib/emailService";
 import { toast } from "sonner";
 import { Loader2, ShoppingBag, ArrowLeft, Shield, Truck, RefreshCcw } from "lucide-react";
 import heroProduct from "@/assets/hero-product.jpg";
@@ -60,14 +61,36 @@ const ProductDetail = () => {
       }
 
       try {
+        const subscriptionPrice = basePrice * (1 - SUBSCRIPTION_DISCOUNT / 100);
+        
         await createSubscription({
           productId: product.node.id,
           variantId: variant.id,
           productTitle: product.node.title,
           variantTitle: variant.title,
           frequency: selectedFrequency,
-          price: basePrice * (1 - SUBSCRIPTION_DISCOUNT / 100),
+          price: subscriptionPrice,
         });
+
+        // Send subscription confirmation email
+        if (user?.email) {
+          const frequencyLabel = FREQUENCY_OPTIONS.find(f => f.value === selectedFrequency)?.label || selectedFrequency;
+          sendPurchaseConfirmation({
+            email: user.email,
+            customerName: user.user_metadata?.full_name || 'Valued Customer',
+            items: [{
+              title: product.node.title,
+              variantTitle: variant.title !== 'Default Title' ? variant.title : undefined,
+              quantity: 1,
+              price: subscriptionPrice,
+            }],
+            subtotal: basePrice,
+            discount: basePrice - subscriptionPrice,
+            total: subscriptionPrice,
+            isSubscription: true,
+            subscriptionFrequency: frequencyLabel,
+          }).catch(err => console.error('Email send failed:', err));
+        }
 
         // Also add to cart with discounted price
         const cartItem: CartItem = {
@@ -75,7 +98,7 @@ const ProductDetail = () => {
           variantId: variant.id,
           variantTitle: variant.title,
           price: {
-            amount: (basePrice * (1 - SUBSCRIPTION_DISCOUNT / 100)).toFixed(2),
+            amount: subscriptionPrice.toFixed(2),
             currencyCode: variant.price.currencyCode,
           },
           quantity: 1,
@@ -84,7 +107,9 @@ const ProductDetail = () => {
 
         addItem(cartItem);
         toast.success(`Subscribed to ${product.node.title}!`, {
-          description: `${SUBSCRIPTION_DISCOUNT}% subscription discount applied.`,
+          description: user?.email 
+            ? `${SUBSCRIPTION_DISCOUNT}% discount applied. Confirmation sent to ${user.email}.`
+            : `${SUBSCRIPTION_DISCOUNT}% subscription discount applied.`,
           position: "top-center",
         });
         setCartOpen(true);
