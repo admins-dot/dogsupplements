@@ -25,7 +25,7 @@ const benefits = [
 
 export const Benefits = () => {
   return (
-    <section className="section-padding bg-secondary">
+    <section className="section-padding bg-primary">
       <div className="container-wide mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-4">
