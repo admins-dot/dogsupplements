@@ -33,13 +33,13 @@ export const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-6 opacity-0 animate-fade-in animation-delay-400">
-              <HandWrittenWrapper strokeColor="hsl(var(--primary))" fillColor="hsl(var(--primary))">
+              <HandWrittenWrapper strokeColor="hsl(var(--primary))" fillColor="hsl(30, 30%, 85%)">
                 <Link to="/shop" className="inline-flex items-center text-base font-semibold px-5 py-2.5 whitespace-nowrap">
                   Subscribe & Save
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </HandWrittenWrapper>
-              <HandWrittenWrapper strokeColor="hsl(var(--secondary))" fillColor="hsl(var(--secondary))">
+              <HandWrittenWrapper strokeColor="hsl(var(--secondary))" fillColor="hsl(45, 60%, 92%)">
                 <Link to="/shop" className="inline-flex items-center justify-center text-base font-semibold px-5 py-2.5 whitespace-nowrap">
                   Shop One-Time
                 </Link>
