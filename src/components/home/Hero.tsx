@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroProduct from "@/assets/hero-product.jpg";
+import { HandWrittenWrapper } from "@/components/ui/hand-writing-text";
+
 export const Hero = () => {
   return <section className="relative overflow-hidden">
       {/* Background gradient */}
@@ -37,11 +39,13 @@ export const Hero = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="heroSecondary" asChild>
-                <Link to="/shop">
-                  Shop One-Time
-                </Link>
-              </Button>
+              <HandWrittenWrapper>
+                <Button variant="heroSecondary" asChild>
+                  <Link to="/shop">
+                    Shop One-Time
+                  </Link>
+                </Button>
+              </HandWrittenWrapper>
             </div>
 
             {/* Quick stats */}
