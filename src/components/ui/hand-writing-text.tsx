@@ -7,14 +7,14 @@ interface HandWrittenWrapperProps {
   children: ReactNode;
   className?: string;
   strokeColor?: string;
-  hoverFillColor?: string;
+  fillColor?: string;
 }
 
 function HandWrittenWrapper({ 
   children, 
   className, 
-  strokeColor = "text-secondary",
-  hoverFillColor = "primary"
+  strokeColor = "hsl(var(--secondary))",
+  fillColor = "hsl(var(--primary))"
 }: HandWrittenWrapperProps) {
   const controls = useAnimation();
   const [isHovered, setIsHovered] = useState(false);
@@ -47,17 +47,7 @@ function HandWrittenWrapper({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Hover fill background */}
-      <div 
-        className={`absolute inset-0 rounded-full transition-all duration-300 ease-out ${
-          isHovered ? `bg-${hoverFillColor} scale-100 opacity-100` : 'scale-95 opacity-0'
-        }`}
-        style={{ 
-          backgroundColor: isHovered ? `hsl(var(--${hoverFillColor}))` : 'transparent'
-        }}
-      />
-      
-      {/* Hand-drawn circle */}
+      {/* Hand-drawn circle with fill on hover */}
       <div className="absolute -inset-x-2 -inset-y-0.5 pointer-events-none">
         <motion.svg
           width="100%"
@@ -74,21 +64,24 @@ function HandWrittenWrapper({
                C 200 35, 195 50, 100 52
                C 20 52, 5 42, 5 30
                C 5 18, 30 8, 100 8
-               C 170 8, 185 20, 190 28"
-            fill="none"
+               C 170 8, 185 20, 190 28
+               Z"
             strokeWidth="2"
-            stroke="currentColor"
+            stroke={strokeColor}
             strokeLinecap="round"
             strokeLinejoin="round"
             variants={draw}
-            className={strokeColor}
+            style={{
+              fill: isHovered ? fillColor : 'transparent',
+              transition: 'fill 0.3s ease-out'
+            }}
           />
         </motion.svg>
       </div>
       
       {/* Content with hover text color transition */}
       <div className={`relative z-10 transition-colors duration-300 ${
-        isHovered ? 'text-primary-foreground' : ''
+        isHovered ? 'text-primary-foreground' : 'text-foreground'
       }`}>
         {children}
       </div>

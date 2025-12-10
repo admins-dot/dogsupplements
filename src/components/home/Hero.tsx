@@ -33,14 +33,14 @@ export const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-6 opacity-0 animate-fade-in animation-delay-400">
-              <HandWrittenWrapper strokeColor="text-primary" hoverFillColor="primary">
+              <HandWrittenWrapper strokeColor="hsl(var(--primary))" fillColor="hsl(var(--primary))">
                 <Link to="/shop" className="inline-flex items-center text-base font-semibold px-5 py-2.5 whitespace-nowrap">
                   Subscribe & Save
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </HandWrittenWrapper>
-              <HandWrittenWrapper strokeColor="text-secondary" hoverFillColor="secondary">
-                <Link to="/shop" className="inline-flex items-center justify-center text-base font-semibold px-5 py-2.5 whitespace-nowrap min-w-[140px]">
+              <HandWrittenWrapper strokeColor="hsl(var(--secondary))" fillColor="hsl(var(--secondary))">
+                <Link to="/shop" className="inline-flex items-center justify-center text-base font-semibold px-5 py-2.5 whitespace-nowrap">
                   Shop One-Time
                 </Link>
               </HandWrittenWrapper>
