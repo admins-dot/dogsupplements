@@ -1,52 +1,63 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion, Variants, useAnimation } from "framer-motion";
 import { ReactNode } from "react";
 
 interface HandWrittenWrapperProps {
   children: ReactNode;
   className?: string;
+  strokeColor?: string;
 }
 
-function HandWrittenWrapper({ children, className }: HandWrittenWrapperProps) {
+function HandWrittenWrapper({ children, className, strokeColor = "text-secondary" }: HandWrittenWrapperProps) {
+  const controls = useAnimation();
+
   const draw: Variants = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: {
       pathLength: 1,
       opacity: 1,
       transition: {
-        pathLength: { duration: 2.5, ease: "easeInOut" },
-        opacity: { duration: 0.5 },
+        pathLength: { duration: 1.5, ease: "easeInOut" },
+        opacity: { duration: 0.3 },
       },
     },
   };
 
+  const handleMouseEnter = () => {
+    controls.set("hidden");
+    controls.start("visible");
+  };
+
   return (
-    <div className={`relative inline-block ${className}`}>
-      <div className="absolute inset-0 -inset-x-4 -inset-y-2">
+    <div 
+      className={`relative inline-flex items-center ${className}`}
+      onMouseEnter={handleMouseEnter}
+    >
+      <div className="absolute -inset-x-3 -inset-y-1 pointer-events-none">
         <motion.svg
           width="100%"
           height="100%"
-          viewBox="0 0 200 80"
-          initial="hidden"
-          animate="visible"
+          viewBox="0 0 200 60"
+          initial="visible"
+          animate={controls}
           className="w-full h-full"
           preserveAspectRatio="none"
         >
           <title>Hand drawn circle</title>
           <motion.path
-            d="M 180 20 
-               C 210 50, 190 70, 100 72
-               C 30 72, 10 60, 10 40
-               C 10 20, 40 8, 100 8
-               C 160 8, 180 25, 180 30"
+            d="M 185 15 
+               C 200 35, 195 50, 100 52
+               C 20 52, 5 42, 5 30
+               C 5 18, 30 8, 100 8
+               C 170 8, 185 20, 190 28"
             fill="none"
-            strokeWidth="2.5"
+            strokeWidth="2"
             stroke="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
             variants={draw}
-            className="text-secondary"
+            className={strokeColor}
           />
         </motion.svg>
       </div>

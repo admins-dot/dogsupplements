@@ -32,17 +32,15 @@ export const Hero = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in animation-delay-400">
-              <HandWrittenWrapper>
-                <Button variant="hero" asChild>
-                  <Link to="/shop">
-                    Subscribe & Save
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
+            <div className="flex flex-col sm:flex-row items-center gap-6 opacity-0 animate-fade-in animation-delay-400">
+              <HandWrittenWrapper strokeColor="text-primary">
+                <Link to="/shop" className="inline-flex items-center text-base font-semibold text-foreground hover:text-primary transition-colors px-4 py-2">
+                  Subscribe & Save
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </HandWrittenWrapper>
-              <HandWrittenWrapper>
-                <Link to="/shop" className="text-base font-semibold text-foreground hover:text-primary transition-colors px-6 py-3">
+              <HandWrittenWrapper strokeColor="text-secondary">
+                <Link to="/shop" className="text-base font-semibold text-foreground hover:text-primary transition-colors px-4 py-2">
                   Shop One-Time
                 </Link>
               </HandWrittenWrapper>
