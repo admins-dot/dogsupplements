@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, Variants, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { ReactNode, useState } from "react";
 
 interface HandWrittenWrapperProps {
@@ -19,22 +19,16 @@ function HandWrittenWrapper({
   const controls = useAnimation();
   const [isHovered, setIsHovered] = useState(false);
 
-  const draw: Variants = {
-    hidden: { pathLength: 0, opacity: 0 },
-    visible: {
-      pathLength: 1,
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    controls.start({
+      pathLength: [0, 1],
       opacity: 1,
       transition: {
         pathLength: { duration: 1.2, ease: "easeInOut" },
         opacity: { duration: 0.3 },
       },
-    },
-  };
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-    controls.set("hidden");
-    controls.start("visible");
+    });
   };
 
   const handleMouseLeave = () => {
@@ -53,8 +47,6 @@ function HandWrittenWrapper({
           width="100%"
           height="100%"
           viewBox="0 0 200 60"
-          initial="visible"
-          animate={controls}
           className="w-full h-full"
           preserveAspectRatio="none"
         >
@@ -65,16 +57,26 @@ function HandWrittenWrapper({
                C 20 52, 5 42, 5 30
                C 5 18, 30 8, 100 8
                C 170 8, 185 20, 190 28
-               Z"
+               C 192 32, 190 38, 185 42
+               C 175 50, 140 52, 100 52"
             strokeWidth="2"
             stroke={strokeColor}
             strokeLinecap="round"
             strokeLinejoin="round"
-            variants={draw}
-            style={{
-              fill: isHovered ? fillColor : 'transparent',
-              transition: 'fill 0.3s ease-out'
-            }}
+            initial={{ pathLength: 1, opacity: 1 }}
+            animate={controls}
+            fill="none"
+          />
+          {/* Separate fill path that appears on hover */}
+          <motion.ellipse
+            cx="100"
+            cy="30"
+            rx="92"
+            ry="22"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isHovered ? 1 : 0 }}
+            transition={{ duration: 0.3 }}
+            fill={fillColor}
           />
         </motion.svg>
       </div>
