@@ -33,18 +33,18 @@ export const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in animation-delay-400">
-              <Button variant="hero" asChild>
-                <Link to="/shop">
-                  Subscribe & Save
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
               <HandWrittenWrapper>
-                <Button variant="heroSecondary" asChild>
+                <Button variant="hero" asChild>
                   <Link to="/shop">
-                    Shop One-Time
+                    Subscribe & Save
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
+              </HandWrittenWrapper>
+              <HandWrittenWrapper>
+                <Link to="/shop" className="text-base font-semibold text-foreground hover:text-primary transition-colors px-6 py-3">
+                  Shop One-Time
+                </Link>
               </HandWrittenWrapper>
             </div>
 
