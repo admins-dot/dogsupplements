@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ScienceSection } from "@/components/home/ScienceSection";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { FlaskConical, Heart, Users, Award } from "lucide-react";
-import happyDog from "@/assets/happy-dog.jpg";
+import happyDog from "@/assets/happy-dog.png";
 
 const values = [
   {

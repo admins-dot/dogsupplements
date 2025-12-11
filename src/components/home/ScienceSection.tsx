@@ -1,5 +1,5 @@
 import { FlaskConical, Microscope, BadgeCheck } from "lucide-react";
-import happyDog from "@/assets/happy-dog.jpg";
+import happyDog from "@/assets/happy-dog.png";
 
 const points = [
   {
