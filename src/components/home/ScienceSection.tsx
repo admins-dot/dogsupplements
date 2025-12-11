@@ -1,5 +1,5 @@
 import { FlaskConical, Microscope, BadgeCheck } from "lucide-react";
-import happyDog from "@/assets/happy-dog.png";
+import productsFlatlay from "@/assets/products-flatlay.png";
 
 const points = [
   {
@@ -28,8 +28,8 @@ export const ScienceSection = () => {
           <div className="relative">
             <div className="aspect-square rounded-3xl overflow-hidden shadow-elevated">
               <img
-                src={happyDog}
-                alt="Happy healthy dog"
+                src={productsFlatlay}
+                alt="VitalCanine product collection"
                 className="w-full h-full object-cover"
               />
             </div>
