@@ -19,7 +19,7 @@ export const TrustBadges = () => {
               className="flex items-center gap-3 opacity-0 animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <badge.icon className="h-5 w-5 text-secondary" />
+              <badge.icon className="h-5 w-5 text-card" />
               <span className="text-sm font-medium text-foreground whitespace-nowrap">
                 {badge.label}
               </span>
