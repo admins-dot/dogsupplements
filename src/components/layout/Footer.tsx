@@ -15,7 +15,7 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4 text-secondary">Quick Links</h4>
             <div className="flex flex-col gap-3">
               <Link to="/shop" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 Shop
