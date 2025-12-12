@@ -221,9 +221,15 @@ const ProductDetail = () => {
                     <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                       {product.node.title}
                     </h1>
-                    <p className="text-lg text-muted-foreground leading-relaxed">
-                      {product.node.description || "Premium daily supplement crafted with clean, science-backed ingredients for your dog's optimal health."}
-                    </p>
+                    <div 
+                      className="text-base text-muted-foreground leading-relaxed prose prose-sm max-w-none
+                        [&>p]:mb-4 [&>p:last-child]:mb-0
+                        [&>strong]:text-foreground [&>strong]:font-semibold
+                        [&_strong]:text-foreground [&_strong]:font-semibold"
+                      dangerouslySetInnerHTML={{ 
+                        __html: product.node.descriptionHtml || product.node.description || "Premium daily supplement crafted with clean, science-backed ingredients for your dog's optimal health." 
+                      }}
+                    />
                   </div>
 
                   {/* Variants */}
