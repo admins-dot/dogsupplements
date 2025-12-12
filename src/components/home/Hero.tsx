@@ -33,7 +33,7 @@ export const Hero = () => {
 
             <div className="flex flex-col sm:flex-row items-center gap-6 opacity-0 animate-fade-in animation-delay-400">
               <HandWrittenWrapper strokeColor="hsl(var(--primary))" fillColor="hsl(30, 30%, 85%)">
-                <Link to="/shop" className="inline-flex items-center text-base font-semibold px-5 py-2.5 whitespace-nowrap">
+                <Link to="/membership" className="inline-flex items-center text-base font-semibold px-5 py-2.5 whitespace-nowrap">
                   Subscribe & Save
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
