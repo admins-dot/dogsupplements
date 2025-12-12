@@ -58,6 +58,7 @@
     --ivory: 40 40% 97%;
     --charcoal: 36 30% 15%;
     --warm-gray: 36 10% 50%;
+    --warm-tan: 30 30% 85%;
 
     /* Gradients */
     --gradient-hero: linear-gradient(180deg, hsl(40 40% 97%) 0%, hsl(40 30% 94%) 100%);

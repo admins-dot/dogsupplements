@@ -16,7 +16,7 @@ const steps = [{
   description: "See the difference in your dog's energy, coat, and overall vitality."
 }];
 export const HowItWorks = () => {
-  return <section className="section-padding bg-muted/30">
+  return <section className="section-padding bg-warm-tan">
       <div className="container-wide mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl font-bold mb-4 text-primary md:text-5xl">
