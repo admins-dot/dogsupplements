@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
 import { toast } from "sonner";
 
 const Contact = () => {
@@ -90,42 +90,17 @@ const Contact = () => {
               <div>
                 <h2 className="text-xl font-semibold text-foreground mb-6">Get in Touch</h2>
                 <p className="text-muted-foreground mb-8">
-                  Our team is available Monday through Friday, 9am to 5pm EST.
+                  Our team is available Monday through Friday, 9am to 5pm PST.
                 </p>
               </div>
 
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-foreground">Email</h3>
-                    <p className="text-muted-foreground">support@pupsupplements.com</p>
-                  </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-primary" />
                 </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-foreground">Phone</h3>
-                    <p className="text-muted-foreground">1-800-PUP-SUPP</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-foreground">Address</h3>
-                    <p className="text-muted-foreground">
-                      123 Pet Health Way<br />
-                      Austin, TX 78701
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="font-medium text-foreground">Email</h3>
+                  <p className="text-muted-foreground">support@supplements.day</p>
                 </div>
               </div>
             </div>
