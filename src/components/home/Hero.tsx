@@ -8,7 +8,7 @@ export const Hero = () => {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/30" />
       
-      <div className="container-wide mx-auto section-padding relative">
+      <div className="container-wide mx-auto px-6 md:px-12 lg:px-20 pt-8 md:pt-12 pb-16 md:pb-24 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
           <div className="space-y-8 order-2 lg:order-1">
