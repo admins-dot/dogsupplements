@@ -12,7 +12,7 @@ export interface Membership {
   cancelled_at: string | null;
 }
 
-export const MEMBERSHIP_PRICE = 14.99;
+export const MEMBERSHIP_PRICE = 32;
 export const MEMBERSHIP_DISCOUNT = 20;
 export const SUBSCRIPTION_DISCOUNT = 20;
 
