@@ -26,7 +26,7 @@ const Shipping = () => {
                 <h2 className="text-xl font-semibold text-foreground">Free Shipping</h2>
               </div>
               <p className="text-muted-foreground">
-                Enjoy free standard shipping on all orders over $50. We believe your pup's health shouldn't come with extra costs.
+                Members get free shipping on all orders. Non-members enjoy free standard shipping on orders over $50.
               </p>
             </div>
             
