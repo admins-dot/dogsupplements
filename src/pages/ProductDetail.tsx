@@ -225,7 +225,13 @@ const ProductDetail = () => {
                       className="text-base text-muted-foreground leading-relaxed prose prose-sm max-w-none
                         [&>p]:mb-4 [&>p:last-child]:mb-0
                         [&>strong]:text-foreground [&>strong]:font-semibold
-                        [&_strong]:text-foreground [&_strong]:font-semibold"
+                        [&_strong]:text-foreground [&_strong]:font-semibold
+                        [&_h1]:text-base [&_h1]:font-normal [&_h1]:text-muted-foreground [&_h1]:mb-4
+                        [&_h2]:text-base [&_h2]:font-normal [&_h2]:text-muted-foreground [&_h2]:mb-4
+                        [&_h3]:text-base [&_h3]:font-normal [&_h3]:text-muted-foreground [&_h3]:mb-4
+                        [&_h4]:text-base [&_h4]:font-normal [&_h4]:text-muted-foreground [&_h4]:mb-4
+                        [&_h5]:text-base [&_h5]:font-normal [&_h5]:text-muted-foreground [&_h5]:mb-4
+                        [&_h6]:text-base [&_h6]:font-normal [&_h6]:text-muted-foreground [&_h6]:mb-4"
                       dangerouslySetInnerHTML={{ 
                         __html: product.node.descriptionHtml || product.node.description || "Premium daily supplement crafted with clean, science-backed ingredients for your dog's optimal health." 
                       }}
