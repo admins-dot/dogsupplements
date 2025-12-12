@@ -25,10 +25,7 @@ export const Hero = () => {
                 <span className="text-secondary">Healthier</span>, Happier Dog
               </h1>
               
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl opacity-0 animate-fade-in animation-delay-200">
-                Science-backed soft chews for immunity, joints, digestion & vitality. 
-                Clean ingredients your dog deserves.
-              </p>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl opacity-0 animate-fade-in animation-delay-200">Science-backed powder supplement for immunity, joints, digestion & vitality. Clean ingredients your dog deserves.</p>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-6 opacity-0 animate-fade-in animation-delay-400">
