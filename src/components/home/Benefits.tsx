@@ -20,7 +20,7 @@ export const Benefits = () => {
   return <section className="section-padding bg-primary">
       <div className="container-wide mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold mb-4 md:text-5xl text-accent">
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
             Why Daily Nutrition Matters
           </h2>
           <p className="text-lg text-primary-foreground/80">
