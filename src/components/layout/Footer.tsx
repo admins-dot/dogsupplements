@@ -33,7 +33,7 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-secondary">Support</h4>
             <div className="flex flex-col gap-3">
-              <Link to="/" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+              <Link to="/contact" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 Contact Us
               </Link>
               <Link to="/shipping" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">

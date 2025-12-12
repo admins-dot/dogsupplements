@@ -14,6 +14,7 @@ import Account from "./pages/Account";
 import Membership from "./pages/Membership";
 import Shipping from "./pages/Shipping";
 import Returns from "./pages/Returns";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => {
               <Route path="/membership" element={<Membership />} />
               <Route path="/shipping" element={<Shipping />} />
               <Route path="/returns" element={<Returns />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
