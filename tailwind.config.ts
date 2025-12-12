@@ -60,6 +60,7 @@ export default {
         ivory: "hsl(var(--ivory))",
         charcoal: "hsl(var(--charcoal))",
         "warm-gray": "hsl(var(--warm-gray))",
+        "warm-tan": "hsl(var(--warm-tan))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
