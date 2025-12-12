@@ -23,7 +23,7 @@ export const Footer = () => {
               <Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 About Us
               </Link>
-              <Link to="/" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+              <Link to="/ingredients" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 Ingredients
               </Link>
             </div>
