@@ -20,7 +20,7 @@ export const Hero = () => {
                 </span>
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-balance opacity-0 animate-fade-in text-primary md:text-6xl">
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-balance opacity-0 animate-fade-in text-foreground md:text-6xl">
                 Daily Nutrition for a{" "}
                 <span className="text-secondary">Healthier</span>, Happier Dog
               </h1>
