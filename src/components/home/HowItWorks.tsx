@@ -39,9 +39,6 @@ export const HowItWorks = () => {
                   <step.icon className="h-8 w-8" />
                 </div>
                 
-                <div className="absolute top-6 right-6 text-5xl font-bold text-muted/30">
-                  {step.step}
-                </div>
                 
                 <h3 className="text-xl font-semibold text-foreground mb-3">
                   {step.title}
