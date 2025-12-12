@@ -1,32 +1,25 @@
 import { Package, Calendar, Heart } from "lucide-react";
-
-const steps = [
-  {
-    icon: Package,
-    step: "01",
-    title: "Choose Your Product",
-    description: "Select the perfect formula for your dog's unique health needs and goals.",
-  },
-  {
-    icon: Calendar,
-    step: "02",
-    title: "Customize Delivery",
-    description: "Pick your delivery frequency—every 2, 4, or 6 weeks. Change anytime.",
-  },
-  {
-    icon: Heart,
-    step: "03",
-    title: "Watch Them Thrive",
-    description: "See the difference in your dog's energy, coat, and overall vitality.",
-  },
-];
-
+const steps = [{
+  icon: Package,
+  step: "01",
+  title: "Choose Your Product",
+  description: "Select the perfect formula for your dog's unique health needs and goals."
+}, {
+  icon: Calendar,
+  step: "02",
+  title: "Customize Delivery",
+  description: "Pick your delivery frequency—every 2, 4, or 6 weeks. Change anytime."
+}, {
+  icon: Heart,
+  step: "03",
+  title: "Watch Them Thrive",
+  description: "See the difference in your dog's energy, coat, and overall vitality."
+}];
 export const HowItWorks = () => {
-  return (
-    <section className="section-padding bg-muted/30">
+  return <section className="section-padding bg-muted/30">
       <div className="container-wide mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl font-bold mb-4 text-primary md:text-5xl">
             How It Works
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -35,16 +28,11 @@ export const HowItWorks = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          {steps.map((step, index) => (
-            <div
-              key={step.step}
-              className="relative opacity-0 animate-fade-in-up"
-              style={{ animationDelay: `${index * 200}ms` }}
-            >
+          {steps.map((step, index) => <div key={step.step} className="relative opacity-0 animate-fade-in-up" style={{
+          animationDelay: `${index * 200}ms`
+        }}>
               {/* Connector line */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-px bg-border" />
-              )}
+              {index < steps.length - 1 && <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-px bg-border" />}
               
               <div className="bg-card rounded-3xl p-8 text-center relative">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary text-primary-foreground mb-6">
@@ -62,10 +50,8 @@ export const HowItWorks = () => {
                   {step.description}
                 </p>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
