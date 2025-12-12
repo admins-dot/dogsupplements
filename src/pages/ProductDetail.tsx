@@ -12,7 +12,14 @@ import { useAuth } from "@/hooks/useAuth";
 import { SubscriptionOptions } from "@/components/product/SubscriptionOptions";
 import { sendPurchaseConfirmation } from "@/lib/emailService";
 import { toast } from "sonner";
-import { Loader2, ShoppingBag, ArrowLeft, Shield, Truck, RefreshCcw } from "lucide-react";
+import { Loader2, ShoppingBag, ArrowLeft, Shield, Truck, RefreshCcw, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import heroProduct from "@/assets/hero-product.jpg";
 
 const ProductDetail = () => {
@@ -204,15 +211,35 @@ const ProductDetail = () => {
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-                {/* Product Image */}
+                {/* Product Images Carousel */}
                 <div className="relative">
-                  <div className="aspect-square rounded-3xl overflow-hidden shadow-elevated bg-muted">
-                    <img
-                      src={product.node.images.edges[0]?.node.url || heroProduct}
-                      alt={product.node.images.edges[0]?.node.altText || product.node.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  {product.node.images.edges.length > 1 ? (
+                    <Carousel className="w-full">
+                      <CarouselContent>
+                        {product.node.images.edges.map((image, index) => (
+                          <CarouselItem key={index}>
+                            <div className="aspect-square rounded-3xl overflow-hidden shadow-elevated bg-muted">
+                              <img
+                                src={image.node.url}
+                                alt={image.node.altText || `${product.node.title} - Image ${index + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious className="left-4" />
+                      <CarouselNext className="right-4" />
+                    </Carousel>
+                  ) : (
+                    <div className="aspect-square rounded-3xl overflow-hidden shadow-elevated bg-muted">
+                      <img
+                        src={product.node.images.edges[0]?.node.url || heroProduct}
+                        alt={product.node.images.edges[0]?.node.altText || product.node.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
                 </div>
 
                 {/* Product Info */}
