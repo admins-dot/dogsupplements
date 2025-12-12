@@ -11,7 +11,7 @@ export const Hero = () => {
       <div className="container-wide mx-auto px-6 md:px-12 lg:px-20 pt-8 md:pt-12 pb-16 md:pb-24 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
-          <div className="space-y-8 order-2 lg:order-1">
+          <div className="space-y-8">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 rounded-full">
                 <span className="w-2 h-2 bg-secondary rounded-full animate-pulse-soft" />
@@ -65,7 +65,7 @@ export const Hero = () => {
           </div>
 
           {/* Hero Image */}
-          <div className="relative order-1 lg:order-2 opacity-0 animate-scale-in">
+          <div className="relative opacity-0 animate-scale-in">
             <div className="relative aspect-square max-w-lg mx-auto">
               {/* Glow effect */}
               <div className="absolute inset-0 bg-secondary/20 rounded-full blur-3xl scale-75" />
