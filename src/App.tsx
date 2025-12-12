@@ -12,6 +12,8 @@ import About from "./pages/About";
 import Auth from "./pages/Auth";
 import Account from "./pages/Account";
 import Membership from "./pages/Membership";
+import Shipping from "./pages/Shipping";
+import Returns from "./pages/Returns";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +35,8 @@ const App = () => {
               <Route path="/auth" element={<Auth />} />
               <Route path="/account" element={<Account />} />
               <Route path="/membership" element={<Membership />} />
+              <Route path="/shipping" element={<Shipping />} />
+              <Route path="/returns" element={<Returns />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
