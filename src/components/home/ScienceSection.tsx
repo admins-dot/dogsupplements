@@ -1,37 +1,26 @@
 import { FlaskConical, Microscope, BadgeCheck } from "lucide-react";
 import productsFlatlay from "@/assets/products-flatlay.png";
-
-const points = [
-  {
-    icon: FlaskConical,
-    title: "Lab Tested",
-    description: "Every batch is third-party tested for purity and potency.",
-  },
-  {
-    icon: Microscope,
-    title: "Science-Backed",
-    description: "Formulated with veterinarians and pet nutritionists.",
-  },
-  {
-    icon: BadgeCheck,
-    title: "Clean Sourcing",
-    description: "Premium ingredients from trusted, ethical suppliers.",
-  },
-];
-
+const points = [{
+  icon: FlaskConical,
+  title: "Lab Tested",
+  description: "Every batch is third-party tested for purity and potency."
+}, {
+  icon: Microscope,
+  title: "Science-Backed",
+  description: "Formulated with veterinarians and pet nutritionists."
+}, {
+  icon: BadgeCheck,
+  title: "Clean Sourcing",
+  description: "Premium ingredients from trusted, ethical suppliers."
+}];
 export const ScienceSection = () => {
-  return (
-    <section className="section-padding">
+  return <section className="section-padding">
       <div className="container-wide mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
           <div className="relative">
             <div className="aspect-square rounded-3xl overflow-hidden shadow-elevated">
-              <img
-                src={productsFlatlay}
-                alt="VitalCanine product collection"
-                className="w-full h-full object-cover"
-              />
+              <img alt="VitalCanine product collection" className="w-full h-full object-cover" src="/lovable-uploads/1cd88fa2-8914-4f70-baa2-30dbc3b0b528.png" />
             </div>
             
             {/* Floating card */}
@@ -56,12 +45,9 @@ export const ScienceSection = () => {
             </div>
 
             <div className="space-y-6">
-              {points.map((point, index) => (
-                <div
-                  key={point.title}
-                  className="flex gap-4 opacity-0 animate-fade-in"
-                  style={{ animationDelay: `${index * 150}ms` }}
-                >
+              {points.map((point, index) => <div key={point.title} className="flex gap-4 opacity-0 animate-fade-in" style={{
+              animationDelay: `${index * 150}ms`
+            }}>
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center">
                     <point.icon className="h-6 w-6 text-secondary" />
                   </div>
@@ -69,12 +55,10 @@ export const ScienceSection = () => {
                     <h3 className="font-semibold text-foreground mb-1">{point.title}</h3>
                     <p className="text-muted-foreground">{point.description}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
