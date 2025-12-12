@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
-
 export const Footer = () => {
-  return (
-    <footer className="bg-primary text-primary-foreground">
+  return <footer className="bg-primary text-primary-foreground">
       <div className="container-wide mx-auto section-padding py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">VitalCanine</h3>
+            <h3 className="text-2xl font-bold mb-4">.day</h3>
             <p className="text-primary-foreground/80 max-w-md leading-relaxed">
               Science-backed daily nutrition for a healthier, happier dog. 
               Premium soft chews crafted with clean ingredients for immunity, 
@@ -64,6 +62,5 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
