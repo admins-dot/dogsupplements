@@ -20,7 +20,7 @@ export const FinalCTA = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="xl" asChild>
-                <Link to="/shop">
+                <Link to="/membership">
                   Subscribe &amp; Save 20%
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
