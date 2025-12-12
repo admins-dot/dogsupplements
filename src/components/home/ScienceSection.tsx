@@ -20,7 +20,7 @@ export const ScienceSection = () => {
           {/* Image */}
           <div className="relative">
             <div className="aspect-square rounded-3xl overflow-hidden shadow-elevated">
-              <img alt="VitalCanine product collection" className="w-full h-full object-cover" src="/lovable-uploads/1cd88fa2-8914-4f70-baa2-30dbc3b0b528.png" />
+              <img alt="VitalCanine product collection" className="w-full h-full object-cover" src="/lovable-uploads/6b72ec99-c054-4e54-9494-d5b6897e260b.png" />
             </div>
             
             {/* Floating card */}

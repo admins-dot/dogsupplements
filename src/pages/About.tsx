@@ -5,39 +5,28 @@ import { ScienceSection } from "@/components/home/ScienceSection";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { FlaskConical, Heart, Users, Award } from "lucide-react";
 import happyDog from "@/assets/happy-dog.png";
-
-const values = [
-  {
-    icon: FlaskConical,
-    title: "Science-First",
-    description: "Every formula is developed with veterinarians and backed by nutritional science.",
-  },
-  {
-    icon: Heart,
-    title: "Pet-Obsessed",
-    description: "We're dog lovers first. Every decision is made with your pet's wellbeing in mind.",
-  },
-  {
-    icon: Users,
-    title: "Transparency",
-    description: "Full ingredient disclosure, third-party testing, and honest communication always.",
-  },
-  {
-    icon: Award,
-    title: "Quality",
-    description: "Premium ingredients from trusted suppliers. No fillers, no compromises.",
-  },
-];
-
+const values = [{
+  icon: FlaskConical,
+  title: "Science-First",
+  description: "Every formula is developed with veterinarians and backed by nutritional science."
+}, {
+  icon: Heart,
+  title: "Pet-Obsessed",
+  description: "We're dog lovers first. Every decision is made with your pet's wellbeing in mind."
+}, {
+  icon: Users,
+  title: "Transparency",
+  description: "Full ingredient disclosure, third-party testing, and honest communication always."
+}, {
+  icon: Award,
+  title: "Quality",
+  description: "Premium ingredients from trusted suppliers. No fillers, no compromises."
+}];
 const About = () => {
-  return (
-    <>
+  return <>
       <Helmet>
         <title>About Us | VitalCanine - Science-Backed Dog Nutrition</title>
-        <meta 
-          name="description" 
-          content="Learn about VitalCanine's mission to provide premium, science-backed nutrition for dogs. Meet our team of veterinarians and pet nutritionists." 
-        />
+        <meta name="description" content="Learn about VitalCanine's mission to provide premium, science-backed nutrition for dogs. Meet our team of veterinarians and pet nutritionists." />
       </Helmet>
 
       <div className="min-h-screen flex flex-col">
@@ -61,11 +50,7 @@ const About = () => {
                 </div>
                 <div className="relative">
                   <div className="aspect-square rounded-3xl overflow-hidden shadow-elevated">
-                    <img
-                      src={happyDog}
-                      alt="Happy healthy dog"
-                      className="w-full h-full object-cover"
-                    />
+                    <img alt="Happy healthy dog" className="w-full h-full object-cover" src="/lovable-uploads/1aee8ec7-fb39-4bc1-9491-096dd1d45204.png" />
                   </div>
                 </div>
               </div>
@@ -85,12 +70,9 @@ const About = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {values.map((value, index) => (
-                  <div
-                    key={value.title}
-                    className="card-elevated p-8 text-center opacity-0 animate-fade-in-up"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
+                {values.map((value, index) => <div key={value.title} className="card-elevated p-8 text-center opacity-0 animate-fade-in-up" style={{
+                animationDelay: `${index * 100}ms`
+              }}>
                     <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-secondary/20 text-secondary mb-6">
                       <value.icon className="h-7 w-7" />
                     </div>
@@ -100,8 +82,7 @@ const About = () => {
                     <p className="text-muted-foreground leading-relaxed">
                       {value.description}
                     </p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </section>
@@ -112,8 +93,6 @@ const About = () => {
 
         <Footer />
       </div>
-    </>
-  );
+    </>;
 };
-
 export default About;
