@@ -28,14 +28,14 @@ export const HowItWorks = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          {steps.map((step, index) => <div key={step.step} className="relative opacity-0 animate-fade-in-up" style={{
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-stretch">
+          {steps.map((step, index) => <div key={step.step} className="relative opacity-0 animate-fade-in-up h-full" style={{
           animationDelay: `${index * 200}ms`
         }}>
               {/* Connector line */}
               {index < steps.length - 1 && <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-px bg-border" />}
               
-              <div className="bg-card rounded-3xl p-8 text-center relative">
+              <div className="bg-card rounded-3xl p-8 text-center relative h-full flex flex-col items-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary text-primary-foreground mb-6">
                   <step.icon className="h-8 w-8" />
                 </div>
