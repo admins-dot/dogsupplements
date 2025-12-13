@@ -3,7 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
 import { TrustBadges } from "@/components/home/TrustBadges";
-import { Benefits } from "@/components/home/Benefits";
+
 import { HowItWorks } from "@/components/home/HowItWorks";
 import { ProductPreview } from "@/components/home/ProductPreview";
 import { SubscriptionBenefits } from "@/components/home/SubscriptionBenefits";
@@ -45,7 +45,7 @@ const Index = () => {
         <main className="flex-1">
           <Hero />
           <TrustBadges />
-          <Benefits />
+          
           <HowItWorks />
           <ProductPreview />
           <ScienceSection />
