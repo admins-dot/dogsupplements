@@ -1,21 +1,17 @@
-import { Repeat, Sparkles } from "lucide-react";
-import stickpackJarIcon from "@/assets/icons/stickpack-jar-icon.png";
+import { FlaskConical, Repeat, Sparkles } from "lucide-react";
 
 const steps = [{
-  icon: null,
-  customIcon: stickpackJarIcon,
+  icon: FlaskConical,
   step: "01",
   title: "One Formula, Two Ways",
   description: "Same premium powder—grab stickpacks for on-the-go convenience or scoop for an economical home routine."
 }, {
   icon: Repeat,
-  customIcon: null,
   step: "02",
   title: "Subscribe & Save",
   description: "Lock in savings with automatic restocks, or keep it simple with a one-time purchase."
 }, {
   icon: Sparkles,
-  customIcon: null,
   step: "03",
   title: "See the Difference",
   description: "Watch their energy soar, their coat shine, and their overall health improve."
@@ -41,11 +37,7 @@ export const HowItWorks = () => {
               
               <div className="bg-card rounded-3xl p-8 text-center relative">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary text-primary-foreground mb-6">
-                  {step.customIcon ? (
-                    <img src={step.customIcon} alt={step.title} className="h-12 w-12 object-contain" />
-                  ) : step.icon ? (
-                    <step.icon className="h-8 w-8" />
-                  ) : null}
+                  <step.icon className="h-8 w-8" />
                 </div>
                 
                 
