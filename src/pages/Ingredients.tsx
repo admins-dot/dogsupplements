@@ -71,7 +71,7 @@ const Ingredients = () => {
       
       <Navbar />
       
-      <main className="min-h-screen bg-background pt-24 pb-16">
+      <main className="min-h-screen bg-background pt-8 pb-16">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-foreground mb-4">Our Ingredients</h1>

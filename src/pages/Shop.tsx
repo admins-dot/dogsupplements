@@ -66,7 +66,7 @@ const Shop = () => {
         
         <main className="flex-1">
           {/* Header */}
-          <section className="section-padding pb-8 bg-muted/30">
+          <section className="pt-8 pb-8 bg-muted/30">
             <div className="container-wide mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
                 Shop All Products
