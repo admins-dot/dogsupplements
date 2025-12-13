@@ -70,16 +70,16 @@ export const SubscriptionOptions = ({
         }`}>
           <RadioGroupItem value="subscribe" id="subscribe" className="mt-1" />
           <Label htmlFor="subscribe" className="flex-1 cursor-pointer">
-            <div className="flex items-center justify-between mb-2">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+              <div className="flex flex-wrap items-center gap-2">
                 <span className="font-semibold text-foreground">Subscribe & Save</span>
-                <Badge className="bg-secondary text-secondary-foreground text-xs">
+                <Badge className="bg-secondary text-secondary-foreground text-xs whitespace-nowrap">
                   Save {SUBSCRIPTION_DISCOUNT}%
                 </Badge>
               </div>
-              <div className="text-right">
+              <div className="flex items-center gap-2">
                 <span className="text-sm text-muted-foreground line-through">${price.toFixed(2)}</span>
-                <span className="font-bold text-foreground ml-2">${subscribePrice.toFixed(2)}</span>
+                <span className="font-bold text-foreground">${subscribePrice.toFixed(2)}</span>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
