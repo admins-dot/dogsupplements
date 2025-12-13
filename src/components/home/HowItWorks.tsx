@@ -8,7 +8,7 @@ const steps = [{
   icon: Calendar,
   step: "02",
   title: "Customize Delivery",
-  description: "Choose a one-time purchase or subscribe for savings and the convenience of automatic refills."
+  description: "Choose a one-time purchase or subscribe for savings and the convenience of automatic restocks."
 }, {
   icon: Heart,
   step: "03",
