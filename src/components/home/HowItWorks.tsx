@@ -4,17 +4,17 @@ const steps = [{
   icon: FlaskConical,
   step: "01",
   title: "One Formula, Two Ways",
-  description: "Same premium powder—grab stickpacks for on-the-go convenience or scoop for an economical home routine."
+  description: "Same premium powder—stickpacks for on-the-go or scoop for home."
 }, {
   icon: Repeat,
   step: "02",
   title: "Subscribe & Save",
-  description: "Lock in savings with automatic restocks, or keep it simple with a one-time purchase."
+  description: "Lock in savings with automatic restocks, or buy one-time."
 }, {
   icon: Sparkles,
   step: "03",
   title: "See the Difference",
-  description: "Watch their energy soar, their coat shine, and their overall health improve."
+  description: "Watch their energy soar, their coat shine, and health improve."
 }];
 export const HowItWorks = () => {
   return <section className="section-padding bg-warm-tan">
