@@ -1,11 +1,11 @@
-import { Package, Calendar, Heart } from "lucide-react";
+import { Package, ShoppingBag, Heart } from "lucide-react";
 const steps = [{
   icon: Package,
   step: "01",
   title: "Choose Your Product",
   description: "Pick your preferred format—convenient stickpacks or classic scoop powder."
 }, {
-  icon: Calendar,
+  icon: ShoppingBag,
   step: "02",
   title: "Customize Delivery",
   description: "Choose a one-time purchase or subscribe for savings and the convenience of automatic restocks."
