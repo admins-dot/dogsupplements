@@ -1,19 +1,19 @@
-import { Package, ShoppingBag, Heart } from "lucide-react";
+import { Layers, Repeat, Sparkles } from "lucide-react";
 const steps = [{
-  icon: Package,
+  icon: Layers,
   step: "01",
-  title: "Choose Your Format",
-  description: "Pick your preferred packing—convenient stickpacks or classic scoop powder."
+  title: "One Formula, Two Ways",
+  description: "Same premium powder—grab stickpacks for on-the-go convenience or scoop for an economical home routine."
 }, {
-  icon: ShoppingBag,
+  icon: Repeat,
   step: "02",
-  title: "Make a Plan",
-  description: "Choose a one-time purchase or subscribe for savings and the convenience of automatic restocks."
+  title: "Subscribe & Save",
+  description: "Lock in savings with automatic restocks, or keep it simple with a one-time purchase."
 }, {
-  icon: Heart,
+  icon: Sparkles,
   step: "03",
-  title: "Watch Them Thrive",
-  description: "See the difference in your dog's energy, coat, and overall vitality."
+  title: "See the Difference",
+  description: "Watch their energy soar, their coat shine, and their overall health improve."
 }];
 export const HowItWorks = () => {
   return <section className="section-padding bg-warm-tan">
