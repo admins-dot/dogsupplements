@@ -7,7 +7,7 @@ const steps = [{
 }, {
   icon: ShoppingBag,
   step: "02",
-  title: "Customize Delivery",
+  title: "Pick Your Plan",
   description: "Choose a one-time purchase or subscribe for savings and the convenience of automatic restocks."
 }, {
   icon: Heart,
