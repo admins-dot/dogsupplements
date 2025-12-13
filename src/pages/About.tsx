@@ -25,8 +25,8 @@ const values = [{
 const About = () => {
   return <>
       <Helmet>
-        <title>About Us | VitalCanine - Science-Backed Dog Nutrition</title>
-        <meta name="description" content="Learn about VitalCanine's mission to provide premium, science-backed nutrition for dogs. Meet our team of veterinarians and pet nutritionists." />
+        <title>About Us | .day - Science-Backed Dog Nutrition</title>
+        <meta name="description" content="Learn about .day's mission to provide premium, science-backed nutrition for dogs. Meet our team of veterinarians and pet nutritionists." />
       </Helmet>
 
       <div className="min-h-screen flex flex-col">
@@ -42,7 +42,7 @@ const About = () => {
                     Our Mission: Healthier Dogs, Happier Families
                   </h1>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    VitalCanine was founded by pet parents and veterinary professionals 
+                    .day was founded by pet parents and veterinary professionals 
                     who believed dogs deserve better than the status quo. We set out to 
                     create supplements that actually work—backed by science, made with 
                     clean ingredients, and loved by dogs.

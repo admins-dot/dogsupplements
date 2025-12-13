@@ -64,7 +64,7 @@ export const SubscriptionManagement = () => {
   const handleJoinMembership = async () => {
     try {
       await createMembership();
-      toast.success('Welcome to VitalCanine Membership!');
+      toast.success('Welcome to .day Membership!');
     } catch (error) {
       console.error('Failed to create membership:', error);
       toast.error('Failed to join membership');
@@ -99,7 +99,7 @@ export const SubscriptionManagement = () => {
       <div>
         <h3 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
           <Crown className="h-5 w-5 text-secondary" />
-          VitalCanine Membership
+          .day Membership
         </h3>
         
         {isMember ? (

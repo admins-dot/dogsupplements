@@ -67,7 +67,7 @@ export const Hero = () => {
               {/* Glow effect */}
               <div className="absolute inset-0 bg-secondary/20 rounded-full blur-3xl scale-75" />
               
-              <img alt="VitalCanine premium dog supplements in amber glass jar" className="relative z-10 w-full h-full object-cover rounded-3xl shadow-elevated" src="/lovable-uploads/bd5c3e76-8347-4598-8085-42623f07a2f7.png" />
+              <img alt=".day premium dog supplements in amber glass jar" className="relative z-10 w-full h-full object-cover rounded-3xl shadow-elevated" src="/lovable-uploads/bd5c3e76-8347-4598-8085-42623f07a2f7.png" />
               
               {/* Floating badge */}
               <div className="absolute -bottom-4 -left-4 bg-card rounded-2xl p-4 shadow-medium border border-border/50 z-20">

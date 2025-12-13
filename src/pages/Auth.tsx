@@ -109,8 +109,8 @@ const Auth = () => {
   return (
     <>
       <Helmet>
-        <title>{isLogin ? "Sign In" : "Create Account"} | VitalCanine</title>
-        <meta name="description" content="Sign in or create an account to manage your VitalCanine subscriptions." />
+        <title>{isLogin ? "Sign In" : "Create Account"} | .day</title>
+        <meta name="description" content="Sign in or create an account to manage your .day subscriptions." />
       </Helmet>
 
       <div className="min-h-screen flex flex-col">
@@ -126,7 +126,7 @@ const Auth = () => {
                 <p className="text-muted-foreground">
                   {isLogin 
                     ? "Sign in to manage your subscriptions" 
-                    : "Join VitalCanine for exclusive benefits"}
+                    : "Join .day for exclusive benefits"}
                 </p>
               </div>
 

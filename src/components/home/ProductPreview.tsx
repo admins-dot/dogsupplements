@@ -69,7 +69,7 @@ export const ProductPreview = () => {
             <div className="max-w-md mx-auto">
               <img
                 src={heroProduct}
-                alt="VitalCanine product"
+                alt=".day product"
                 className="w-48 h-48 object-cover rounded-2xl mx-auto mb-6 shadow-medium"
               />
               <h3 className="text-xl font-semibold text-foreground mb-3">
