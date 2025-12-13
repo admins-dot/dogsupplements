@@ -13,7 +13,7 @@ const Shipping = () => {
       
       <Navbar />
       
-      <main className="min-h-screen bg-background pt-24">
+      <main className="min-h-screen bg-background pt-8">
         <div className="container-wide mx-auto section-padding py-16">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-8">Shipping Information</h1>
           
