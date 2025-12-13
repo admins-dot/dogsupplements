@@ -6,7 +6,7 @@ import { TrustBadges } from "@/components/home/TrustBadges";
 
 import { HowItWorks } from "@/components/home/HowItWorks";
 import { ProductPreview } from "@/components/home/ProductPreview";
-import { SubscriptionBenefits } from "@/components/home/SubscriptionBenefits";
+
 import { ScienceSection } from "@/components/home/ScienceSection";
 import { FinalCTA } from "@/components/home/FinalCTA";
 
@@ -49,7 +49,7 @@ const Index = () => {
           <HowItWorks />
           <ProductPreview />
           <ScienceSection />
-          <SubscriptionBenefits />
+          
           <FinalCTA />
         </main>
 
