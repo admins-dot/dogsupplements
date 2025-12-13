@@ -41,12 +41,6 @@ export const Hero = () => {
                 className="relative z-10 w-full h-full object-cover rounded-3xl shadow-elevated" 
                 src="/lovable-uploads/bd5c3e76-8347-4598-8085-42623f07a2f7.png" 
               />
-              
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -left-4 bg-card rounded-2xl p-4 shadow-medium border border-border/50 z-20">
-                <p className="text-xs text-muted-foreground">Subscribe & Save</p>
-                <p className="text-lg font-bold text-secondary">Up to 20% Off</p>
-              </div>
             </div>
           </div>
 
@@ -152,12 +146,6 @@ export const Hero = () => {
                 className="relative z-10 w-full h-full object-cover rounded-3xl shadow-elevated" 
                 src="/lovable-uploads/bd5c3e76-8347-4598-8085-42623f07a2f7.png" 
               />
-              
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -left-4 bg-card rounded-2xl p-4 shadow-medium border border-border/50 z-20">
-                <p className="text-xs text-muted-foreground">Subscribe & Save</p>
-                <p className="text-lg font-bold text-secondary">Up to 20% Off</p>
-              </div>
             </div>
           </div>
         </div>
