@@ -108,7 +108,7 @@ export const Navbar = () => {
             }} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 py-2 text-left">
                       Sign Out
                     </button>
-                  </> : <Link to="/auth" className="text-sm font-medium text-secondary hover:text-secondary/80 transition-colors duration-200 py-2" onClick={() => setIsMenuOpen(false)}>
+                  </> : <Link to="/auth" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 py-2" onClick={() => setIsMenuOpen(false)}>
                     Sign In
                   </Link>)}
             </div>
