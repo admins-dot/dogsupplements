@@ -1,17 +1,22 @@
-import { FlaskConical, Microscope, BadgeCheck } from "lucide-react";
-import productsFlatlay from "@/assets/products-flatlay.png";
-const points = [{
-  icon: FlaskConical,
-  title: "Lab Tested",
-  description: "Every batch is third-party tested for purity and potency."
+import { Heart, Bone, Shield, Brain } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const keyIngredients = [{
+  icon: Heart,
+  title: "Omega-3s",
+  description: "Healthy skin, shiny coat, and reduced inflammation."
 }, {
-  icon: Microscope,
-  title: "Science-Backed",
-  description: "Formulated with veterinarians and pet nutritionists."
+  icon: Bone,
+  title: "Collagen & Green-Lipped Mussel",
+  description: "Joint flexibility and reduced stiffness."
 }, {
-  icon: BadgeCheck,
-  title: "Clean Sourcing",
-  description: "Premium ingredients from trusted, ethical suppliers."
+  icon: Shield,
+  title: "Probiotics & Antioxidants",
+  description: "Strong immune system and gut health."
+}, {
+  icon: Brain,
+  title: "Lion's Mane",
+  description: "Cognitive function and brain health support."
 }];
 export const ScienceSection = () => {
   return <section className="section-padding">
@@ -35,28 +40,31 @@ export const ScienceSection = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Backed by Science, Made with Love
+                Why Daily Nutrition Matters
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We believe your dog deserves the best. That's why we partner with 
-                leading veterinarians and nutritionists to create formulas that 
-                actually work—no gimmicks, no fillers, just results.
+                Every ingredient is carefully selected for its proven benefits. 
+                No fillers, no artificial additives—just what your dog needs to thrive.
               </p>
             </div>
 
             <div className="space-y-6">
-              {points.map((point, index) => <div key={point.title} className="flex gap-4 opacity-0 animate-fade-in" style={{
+              {keyIngredients.map((ingredient, index) => <div key={ingredient.title} className="flex gap-4 opacity-0 animate-fade-in" style={{
               animationDelay: `${index * 150}ms`
             }}>
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center">
-                    <point.icon className="h-6 w-6 text-secondary" />
+                    <ingredient.icon className="h-6 w-6 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">{point.title}</h3>
-                    <p className="text-muted-foreground">{point.description}</p>
+                    <h3 className="font-semibold text-foreground mb-1">{ingredient.title}</h3>
+                    <p className="text-muted-foreground">{ingredient.description}</p>
                   </div>
                 </div>)}
             </div>
+
+            <Link to="/ingredients" className="inline-flex items-center text-primary font-medium hover:underline">
+              See all ingredients →
+            </Link>
           </div>
         </div>
       </div>
