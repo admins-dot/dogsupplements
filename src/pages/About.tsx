@@ -35,7 +35,7 @@ const About = () => {
         <main className="flex-1">
           {/* Hero */}
           <section className="pt-8 pb-16 md:pb-20 bg-muted/30">
-            <div className="container-wide mx-auto">
+            <div className="container-wide mx-auto px-6 md:px-12 lg:px-20">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                 <div className="space-y-6">
                   <h1 className="text-4xl md:text-5xl font-bold text-foreground">
