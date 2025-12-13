@@ -26,10 +26,6 @@ export const FinalCTA = () => {
                 </Link>
               </Button>
             </div>
-
-            <p className="text-sm text-muted-foreground mt-6">
-              Free shipping • Cancel anytime • 30-day money-back guarantee
-            </p>
           </div>
         </div>
       </div>
