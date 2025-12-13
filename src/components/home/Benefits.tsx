@@ -6,7 +6,7 @@ const benefits = [{
 }, {
   icon: Bone,
   title: "Joint Health",
-  description: "Glucosamine and chondroitin support healthy joints and mobility at every life stage."
+  description: "Green-lipped mussel and collagen support healthy joints and mobility at every life stage."
 }, {
   icon: Sparkles,
   title: "Digestive Wellness",
