@@ -8,7 +8,7 @@ export const Footer = () => {
             <h3 className="text-2xl font-bold mb-4 text-secondary">.day</h3>
             <p className="text-primary-foreground/80 max-w-md leading-relaxed">
               Science-backed daily nutrition for a healthier, happier dog. 
-              Premium soft chews crafted with clean ingredients for immunity, 
+              Premium powder supplement crafted with clean ingredients for immunity, 
               joints, digestion & vitality.
             </p>
           </div>
