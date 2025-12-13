@@ -104,11 +104,11 @@ const Shop = () => {
                   </div>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
+                <div className="flex flex-wrap justify-center gap-8">
                   {products.map((product, index) => (
                     <div
                       key={product.node.id}
-                      className="group card-elevated overflow-hidden opacity-0 animate-fade-in-up"
+                      className="group card-elevated overflow-hidden opacity-0 animate-fade-in-up w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] xl:w-[calc(25%-1.5rem)] max-w-[300px]"
                       style={{ animationDelay: `${index * 50}ms` }}
                     >
                       {/* Image */}
