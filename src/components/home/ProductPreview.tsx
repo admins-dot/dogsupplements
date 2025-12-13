@@ -6,6 +6,7 @@ import { useCartStore, CartItem } from "@/stores/cartStore";
 import { toast } from "sonner";
 import { Loader2, ShoppingBag, ArrowRight } from "lucide-react";
 import heroProduct from "@/assets/hero-product.jpg";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/scroll-reveal";
 
 export const ProductPreview = () => {
   const [products, setProducts] = useState<ShopifyProduct[]>([]);
@@ -51,45 +52,46 @@ export const ProductPreview = () => {
   return (
     <section className="section-padding">
       <div className="container-wide mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <ScrollReveal className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Our Products
           </h2>
           <p className="text-lg text-muted-foreground">
             Premium formulas crafted with clean, science-backed ingredients.
           </p>
-        </div>
+        </ScrollReveal>
 
         {loading ? (
           <div className="flex justify-center items-center py-20">
             <Loader2 className="h-8 w-8 animate-spin text-secondary" />
           </div>
         ) : products.length === 0 ? (
-          <div className="text-center py-16 bg-card rounded-3xl border border-border/50">
-            <div className="max-w-md mx-auto">
-              <img
-                src={heroProduct}
-                alt=".day product"
-                className="w-48 h-48 object-cover rounded-2xl mx-auto mb-6 shadow-medium"
-              />
-              <h3 className="text-xl font-semibold text-foreground mb-3">
-                Products Coming Soon
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                We're preparing our premium dog health supplements. Check back soon or tell us what product you'd like to see!
-              </p>
-              <p className="text-sm text-muted-foreground/70">
-                Tell us in the chat what product you want to create!
-              </p>
+          <ScrollReveal>
+            <div className="text-center py-16 bg-card rounded-3xl border border-border/50">
+              <div className="max-w-md mx-auto">
+                <img
+                  src={heroProduct}
+                  alt=".day product"
+                  className="w-48 h-48 object-cover rounded-2xl mx-auto mb-6 shadow-medium"
+                />
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  Products Coming Soon
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  We're preparing our premium dog health supplements. Check back soon or tell us what product you'd like to see!
+                </p>
+                <p className="text-sm text-muted-foreground/70">
+                  Tell us in the chat what product you want to create!
+                </p>
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
         ) : (
-          <div className="flex flex-wrap justify-center gap-8">
-            {products.map((product, index) => (
-              <div
+          <StaggerContainer className="flex flex-wrap justify-center gap-8" staggerDelay={0.1}>
+            {products.map((product) => (
+              <StaggerItem
                 key={product.node.id}
-                className="group card-elevated overflow-hidden opacity-0 animate-fade-in-up w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-[300px]"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="group card-elevated overflow-hidden w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-[300px]"
               >
                 {/* Image */}
                 <Link to={`/product/${product.node.handle}`} className="block aspect-square overflow-hidden">
@@ -131,20 +133,20 @@ export const ProductPreview = () => {
                     </Button>
                   </div>
                 </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         )}
 
         {products.length > 0 && (
-          <div className="text-center mt-12">
+          <ScrollReveal delay={0.3} className="text-center mt-12">
             <Button variant="outline" size="lg" asChild>
               <Link to="/shop">
                 View All Products
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-          </div>
+          </ScrollReveal>
         )}
       </div>
     </section>
