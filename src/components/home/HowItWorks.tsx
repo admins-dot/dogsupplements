@@ -3,7 +3,7 @@ const steps = [{
   icon: Package,
   step: "01",
   title: "Choose Your Format",
-  description: "Pick your preferred format—convenient stickpacks or classic scoop powder."
+  description: "Pick your preferred packing—convenient stickpacks or classic scoop powder."
 }, {
   icon: ShoppingBag,
   step: "02",
