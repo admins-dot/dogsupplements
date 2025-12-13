@@ -3,7 +3,7 @@ const steps = [{
   icon: Package,
   step: "01",
   title: "Choose Your Product",
-  description: "Select the perfect formula for your dog's unique health needs and goals."
+  description: "Pick your preferred format—convenient stickpacks or classic scoop powder."
 }, {
   icon: Calendar,
   step: "02",
