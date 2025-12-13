@@ -3,7 +3,7 @@ import { FlaskConical, Repeat, Sparkles } from "lucide-react";
 const steps = [{
   icon: FlaskConical,
   step: "01",
-  title: "One Formula, Two Ways",
+  title: "Pick Your Style",
   description: "Same premium powder—stickpacks for on-the-go or scoop for home."
 }, {
   icon: Repeat,
