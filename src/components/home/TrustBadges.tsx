@@ -1,4 +1,5 @@
 import { Shield, FlaskConical, Leaf, Award, CheckCircle } from "lucide-react";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/scroll-reveal";
 
 const badges = [
   { icon: Shield, label: "Vet-Recommended" },
@@ -12,20 +13,19 @@ export const TrustBadges = () => {
   return (
     <section className="bg-muted/50 border-y border-border/50">
       <div className="container-wide mx-auto px-6 md:px-12 lg:px-20 py-8">
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-          {badges.map((badge, index) => (
-            <div
+        <StaggerContainer className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+          {badges.map((badge) => (
+            <StaggerItem
               key={badge.label}
-              className="flex items-center gap-3 opacity-0 animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="flex items-center gap-3"
             >
               <badge.icon className="h-5 w-5 text-secondary" />
               <span className="text-sm font-medium text-foreground whitespace-nowrap">
                 {badge.label}
               </span>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
