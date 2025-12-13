@@ -64,7 +64,7 @@ const Membership = () => {
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section className="pt-8 pb-16 md:pb-20 bg-gradient-to-b from-secondary/10 to-background">
+          <section className="pt-8 pb-16 md:pb-20 bg-accent">
             <div className="container-narrow mx-auto text-center">
               <Badge className="mb-6 bg-secondary/20 text-secondary-foreground border-secondary/30">
                 <Crown className="w-3 h-3 mr-1" />
