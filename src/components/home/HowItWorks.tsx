@@ -2,7 +2,7 @@ import { Package, ShoppingBag, Heart } from "lucide-react";
 const steps = [{
   icon: Package,
   step: "01",
-  title: "Choose Your Product",
+  title: "Choose Your Format",
   description: "Pick your preferred format—convenient stickpacks or classic scoop powder."
 }, {
   icon: ShoppingBag,
