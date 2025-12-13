@@ -190,7 +190,7 @@ const ProductDetail = () => {
   return (
     <>
       <Helmet>
-        <title>{product.node.title} | VitalCanine</title>
+        <title>{product.node.title} | .day</title>
         <meta name="description" content={product.node.description || "Premium dog health supplement"} />
       </Helmet>
 

@@ -24,7 +24,7 @@ const Membership = () => {
 
     try {
       await createMembership();
-      toast.success('Welcome to VitalCanine Membership!', {
+      toast.success('Welcome to .day Membership!', {
         description: `You now get ${MEMBERSHIP_DISCOUNT}% off all products.`,
       });
     } catch (error) {
@@ -55,8 +55,8 @@ const Membership = () => {
   return (
     <>
       <Helmet>
-        <title>Membership | VitalCanine</title>
-        <meta name="description" content="Join VitalCanine Membership and save 20% on all premium dog supplements." />
+        <title>Membership | .day</title>
+        <meta name="description" content="Join .day Membership and save 20% on all premium dog supplements." />
       </Helmet>
 
       <div className="min-h-screen flex flex-col">
@@ -71,7 +71,7 @@ const Membership = () => {
                 Exclusive Membership
               </Badge>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                VitalCanine Membership
+                .day Membership
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
                 Unlock {MEMBERSHIP_DISCOUNT}% savings on every order plus exclusive member benefits. 

@@ -167,8 +167,8 @@ const Account = () => {
   return (
     <>
       <Helmet>
-        <title>My Account | VitalCanine</title>
-        <meta name="description" content="Manage your VitalCanine account, subscriptions, and delivery preferences." />
+        <title>My Account | .day</title>
+        <meta name="description" content="Manage your .day account, subscriptions, and delivery preferences." />
       </Helmet>
 
       <div className="min-h-screen flex flex-col">

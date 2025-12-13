@@ -40,13 +40,13 @@ const generateReminderHtml = (data: {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Upcoming Delivery - VitalCanine</title>
+  <title>Upcoming Delivery - .day</title>
 </head>
 <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f9f7f4;">
   <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
     <!-- Header -->
     <div style="text-align: center; margin-bottom: 40px;">
-      <h1 style="color: #3d2a0a; font-size: 28px; margin: 0; letter-spacing: -0.5px;">VitalCanine</h1>
+      <h1 style="color: #3d2a0a; font-size: 28px; margin: 0; letter-spacing: -0.5px;">.day</h1>
       <p style="color: #d4a853; font-size: 14px; margin: 8px 0 0 0; text-transform: uppercase; letter-spacing: 2px;">Premium Dog Health</p>
     </div>
 
@@ -90,7 +90,7 @@ const generateReminderHtml = (data: {
 
       <!-- Action Buttons -->
       <div style="text-align: center;">
-        <a href="https://vitalcanine.lovable.app/account" style="display: inline-block; background: linear-gradient(135deg, #d4a853 0%, #c49942 100%); color: #1a1a1a; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; margin-right: 12px;">
+        <a href="https://supplements.day/account" style="display: inline-block; background: linear-gradient(135deg, #d4a853 0%, #c49942 100%); color: #1a1a1a; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; margin-right: 12px;">
           Manage Subscription
         </a>
       </div>
@@ -102,8 +102,8 @@ const generateReminderHtml = (data: {
 
     <!-- Footer -->
     <div style="text-align: center; margin-top: 32px; color: #666; font-size: 14px;">
-      <p style="margin: 0 0 8px 0;">Questions? Contact us at support@vitalcanine.com</p>
-      <p style="margin: 0; color: #999;">© 2024 VitalCanine. All rights reserved.</p>
+      <p style="margin: 0 0 8px 0;">Questions? Contact us at support@supplements.day</p>
+      <p style="margin: 0; color: #999;">© 2024 .day. All rights reserved.</p>
     </div>
   </div>
 </body>
@@ -173,7 +173,7 @@ const handler = async (req: Request): Promise<Response> => {
             Authorization: `Bearer ${RESEND_API_KEY}`,
           },
           body: JSON.stringify({
-            from: "VitalCanine <onboarding@resend.dev>",
+            from: ".day <onboarding@resend.dev>",
             to: [profile.email],
             subject: `📦 Upcoming Delivery: ${sub.product_title}`,
             html,

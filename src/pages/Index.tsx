@@ -14,16 +14,16 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>VitalCanine | Premium Dog Health Supplements for Daily Nutrition</title>
+        <title>.day | Premium Dog Health Supplements for Daily Nutrition</title>
         <meta 
           name="description" 
           content="Science-backed daily soft chews for your dog's immunity, joints, digestion & vitality. Vet-recommended, clean ingredients. Subscribe and save up to 25%." 
         />
         <meta name="keywords" content="dog supplements, dog health, pet nutrition, dog vitamins, joint health for dogs, dog immunity" />
-        <link rel="canonical" href="https://vitalcanine.com" />
+        <link rel="canonical" href="https://supplements.day" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="VitalCanine | Premium Dog Health Supplements" />
+        <meta property="og:title" content=".day | Premium Dog Health Supplements" />
         <meta property="og:description" content="Science-backed daily soft chews for your dog's health. Vet-recommended, clean ingredients." />
         <meta property="og:type" content="website" />
         
@@ -32,9 +32,9 @@ const Index = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "VitalCanine",
+            "name": ".day",
             "description": "Premium dog health supplements with science-backed ingredients",
-            "url": "https://vitalcanine.com"
+            "url": "https://supplements.day"
           })}
         </script>
       </Helmet>
