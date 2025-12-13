@@ -8,7 +8,7 @@ const steps = [{
   icon: Calendar,
   step: "02",
   title: "Customize Delivery",
-  description: "Pick your delivery frequency—every 2, 4, or 6 weeks. Change anytime."
+  description: "Choose a one-time purchase or save with a membership subscription (recommended)."
 }, {
   icon: Heart,
   step: "03",
