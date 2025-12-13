@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 export const FinalCTA = () => {
-  return <section className="section-padding bg-accent">
+  return <section className="section-padding bg-warm-tan">
       <div className="container-narrow mx-auto">
         <div className="relative bg-card rounded-3xl p-12 md:p-16 text-center overflow-hidden">
           {/* Background decoration */}
