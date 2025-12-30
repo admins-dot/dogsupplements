@@ -4,7 +4,11 @@ import { Footer } from "@/components/layout/Footer";
 import { ScienceSection } from "@/components/home/ScienceSection";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { FlaskConical, Heart, Users, Award } from "lucide-react";
-import happyDog from "@/assets/happy-dog.png";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import hikeDay from "@/assets/ugc/hike-day.png";
+import pourOverDay from "@/assets/ugc/pour-over-day.png";
+import roadtripDay from "@/assets/ugc/roadtrip-day.png";
+
 const values = [{
   icon: FlaskConical,
   title: "Science-First",
@@ -22,6 +26,13 @@ const values = [{
   title: "Quality",
   description: "Premium ingredients from trusted suppliers. No fillers, no compromises."
 }];
+
+const lifestyleImages = [
+  { src: hikeDay, alt: "Dog hiking with owner in nature", caption: "Adventure awaits" },
+  { src: pourOverDay, alt: "Morning routine with dog", caption: "Start every day right" },
+  { src: roadtripDay, alt: "Dog on a road trip", caption: "Go the distance together" },
+];
+
 const About = () => {
   return <>
       <Helmet>
@@ -57,8 +68,42 @@ const About = () => {
             </div>
           </section>
 
+          {/* Lifestyle Gallery */}
+          <section className="py-16 md:py-24 bg-background">
+            <div className="container-wide mx-auto px-6 md:px-12 lg:px-20">
+              <ScrollReveal>
+                <div className="text-center max-w-2xl mx-auto mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                    Made for Real Life
+                  </h2>
+                  <p className="text-lg text-muted-foreground">
+                    From morning routines to mountain trails—nutrition that keeps up with your adventures.
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                {lifestyleImages.map((image, index) => (
+                  <ScrollReveal key={image.alt} delay={index * 0.15}>
+                    <div className="group relative overflow-hidden rounded-2xl aspect-[4/5]">
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                      <p className="absolute bottom-6 left-6 text-white font-medium text-lg">
+                        {image.caption}
+                      </p>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+            </div>
+          </section>
+
           {/* Values */}
-          <section className="section-padding">
+          <section className="section-padding bg-muted/30">
             <div className="container-wide mx-auto">
               <div className="text-center max-w-2xl mx-auto mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
