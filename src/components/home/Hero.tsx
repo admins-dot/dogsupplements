@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import { HandWrittenWrapper } from "@/components/ui/hand-writing-text";
+import { CascadingPackets } from "./CascadingPackets";
 import heroDogBg from "@/assets/hero-dog-bg.png";
 
 export const Hero = () => {
@@ -13,6 +13,9 @@ export const Hero = () => {
       />
       {/* Overlay for text readability - stronger white gradient on left */}
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 via-40% to-transparent" />
+      
+      {/* Cascading packets on far left - hidden on mobile */}
+      <CascadingPackets className="hidden lg:block w-48 z-10" />
       
       <div className="container-wide mx-auto px-6 md:px-12 lg:px-20 pt-8 md:pt-12 pb-16 md:pb-24 relative h-full flex items-center">
         {/* Mobile Layout */}
