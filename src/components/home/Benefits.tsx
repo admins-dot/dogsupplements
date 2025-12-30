@@ -1,6 +1,4 @@
 import { Heart, Bone, Sparkles, Zap } from "lucide-react";
-import { CascadingPackets } from "./CascadingPackets";
-
 const benefits = [{
   icon: Heart,
   title: "Immunity Support",
@@ -19,11 +17,8 @@ const benefits = [{
   description: "Essential nutrients and B-vitamins to keep your dog active, alert, and thriving."
 }];
 export const Benefits = () => {
-  return <section className="section-padding bg-primary relative overflow-hidden">
-      {/* Cascading packets on far left - hidden on mobile */}
-      <CascadingPackets className="hidden lg:block w-48 z-10" />
-      
-      <div className="container-wide mx-auto relative z-20">
+  return <section className="section-padding bg-primary">
+      <div className="container-wide mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
             Why Daily Nutrition Matters
