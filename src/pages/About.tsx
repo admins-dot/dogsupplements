@@ -46,7 +46,7 @@ const About = () => {
         
         <main className="flex-1">
           {/* Hero */}
-          <section className="pt-8 pb-16 md:pb-20 bg-gradient-to-br from-secondary/20 via-muted/30 to-background">
+          <section className="pt-8 pb-16 md:pb-20 bg-gradient-to-b from-secondary/30 via-secondary/10 to-background">
             <div className="container-wide mx-auto px-6 md:px-12 lg:px-20">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div className="space-y-6 lg:pr-8">
