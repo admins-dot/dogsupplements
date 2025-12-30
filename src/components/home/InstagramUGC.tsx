@@ -117,12 +117,6 @@ const MobileCarousel = () => {
     }
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % posts.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
 
   const getPosition = (index: number) => {
     const diff = (index - activeIndex + posts.length) % posts.length;
