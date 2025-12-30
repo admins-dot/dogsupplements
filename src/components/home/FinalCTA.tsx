@@ -16,7 +16,7 @@ export const FinalCTA = () => {
             
             <div className="relative z-10 flex flex-col md:flex-row items-center">
               {/* Text Content - Left */}
-              <div className="flex-1 p-8 md:p-12 lg:p-16 text-left">
+              <div className="flex-1 p-8 md:p-12 lg:p-16 text-left md:text-center lg:text-left">
                 <ScrollReveal delay={0.1}>
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
                     Start Your Dog's Health Journey Today
@@ -43,7 +43,7 @@ export const FinalCTA = () => {
               </div>
 
               {/* Image - Right */}
-              <div className="w-full md:w-1/2 lg:w-2/5 p-6 md:p-8 md:-mt-4 lg:mt-0">
+              <div className="w-full md:w-1/2 lg:w-2/5 p-6 md:p-8 md:self-start lg:self-center">
                 <img 
                   src={ctaDogProduct} 
                   alt="Dog with .day Daily Vitality Blend supplement" 
