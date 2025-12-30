@@ -427,6 +427,19 @@ const ProductDetail = () => {
                       </motion.div>
                     )}
 
+                    {/* Best Seller badge - only on stick pack */}
+                    {handle === 'daily-essential-vitamin' && (
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8, y: 10 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        transition={{ delay: 0.5, type: "spring" }}
+                        className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-secondary text-secondary-foreground rounded-full shadow-gold flex items-center gap-2"
+                      >
+                        <Star className="h-4 w-4 fill-current" />
+                        <span className="text-sm font-semibold">Best Seller</span>
+                      </motion.div>
+                    )}
+
                     </div>
                   </FloatingElement>
                 </div>
