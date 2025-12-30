@@ -131,7 +131,7 @@ export const Hero = () => {
           </div>
 
           {/* Product Sachet Image - Desktop Only */}
-          <div className="absolute left-[40%] -translate-x-1/2 opacity-0 animate-fade-in animation-delay-400">
+          <div className="absolute left-[45%] -translate-x-1/2 opacity-0 animate-fade-in animation-delay-400">
             <img 
               src={daySachet} 
               alt=".day Daily Vitality Blend sachet" 
