@@ -20,7 +20,7 @@ const steps = [{
 
 export const HowItWorks = () => {
   return (
-    <section className="py-12 md:py-16 bg-primary">
+    <section className="py-12 md:py-16 px-6 md:px-12 bg-primary">
       <div className="container-wide mx-auto">
         <ScrollReveal className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="text-3xl font-bold mb-4 text-warm-tan md:text-5xl">
