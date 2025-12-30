@@ -141,7 +141,6 @@ const ProductDetail = () => {
   const [purchaseType, setPurchaseType] = useState<'one-time' | 'subscribe'>('one-time');
   const [selectedFrequency, setSelectedFrequency] = useState<SubscriptionFrequency>('monthly');
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [isLiked, setIsLiked] = useState(false);
   
   const addItem = useCartStore(state => state.addItem);
   const setCartOpen = useCartStore(state => state.setOpen);
@@ -366,21 +365,6 @@ const ProductDetail = () => {
                 <div className="lg:sticky lg:top-24">
                   <FloatingElement delay={0.2}>
                     <div className="relative">
-                    {/* Like button */}
-                    <motion.button
-                      onClick={() => setIsLiked(!isLiked)}
-                      whileTap={{ scale: 0.9 }}
-                      className="absolute top-4 right-4 z-10 p-3 rounded-full bg-card/80 backdrop-blur-sm shadow-soft border border-border/50"
-                    >
-                      <motion.div
-                        animate={isLiked ? { scale: [1, 1.3, 1] } : {}}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <Heart 
-                          className={`h-5 w-5 transition-colors ${isLiked ? 'fill-destructive text-destructive' : 'text-muted-foreground'}`} 
-                        />
-                      </motion.div>
-                    </motion.button>
 
                     {product.node.images.edges.length > 1 ? (
                       <Carousel className="w-full">
