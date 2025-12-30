@@ -43,7 +43,7 @@ export const HowItWorks = () => {
                   <step.icon className="h-8 w-8" />
                 </div>
                 
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-semibold text-primary mb-3">
                   {step.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
