@@ -28,7 +28,7 @@ export const Hero = () => {
             
             <h1 className="text-4xl font-bold leading-tight text-balance opacity-0 animate-fade-in text-primary">
               Daily Nutrition for a{" "}
-              <span className="text-secondary">Healthier</span>, Happier Dog
+              <span className="text-primary/80">Healthier</span>, Happier Dog
             </h1>
             
             <p className="text-lg text-muted-foreground leading-relaxed max-w-xl opacity-0 animate-fade-in animation-delay-200">
@@ -42,7 +42,6 @@ export const Hero = () => {
               <HandWrittenWrapper strokeColor="hsl(var(--primary))" fillColor="hsl(30, 30%, 85%)">
                 <Link to="/membership" className="inline-flex items-center text-base font-semibold px-5 py-2.5 whitespace-nowrap">
                   Subscribe & Save
-                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </HandWrittenWrapper>
               <HandWrittenWrapper strokeColor="hsl(var(--secondary))" fillColor="hsl(45, 60%, 92%)">
@@ -84,7 +83,7 @@ export const Hero = () => {
             
             <h1 className="text-6xl font-bold leading-tight text-balance opacity-0 animate-fade-in text-primary">
               Daily Nutrition for a{" "}
-              <span className="text-secondary">Healthier</span>, Happier Dog
+              <span className="text-primary/80">Healthier</span>, Happier Dog
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed max-w-xl opacity-0 animate-fade-in animation-delay-200">
@@ -96,7 +95,6 @@ export const Hero = () => {
             <HandWrittenWrapper strokeColor="hsl(var(--primary))" fillColor="hsl(30, 30%, 85%)">
               <Link to="/membership" className="inline-flex items-center text-base font-semibold px-5 py-2.5 whitespace-nowrap">
                 Subscribe & Save
-                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </HandWrittenWrapper>
             <HandWrittenWrapper strokeColor="hsl(var(--secondary))" fillColor="hsl(45, 60%, 92%)">
