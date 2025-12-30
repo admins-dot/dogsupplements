@@ -8,10 +8,11 @@ export const Hero = () => {
     <section className="relative overflow-hidden min-h-[70vh] lg:min-h-[65vh]">
       {/* Background image */}
       <div 
-        className="absolute inset-0 bg-cover bg-no-repeat"
+        className="absolute inset-0 bg-no-repeat"
         style={{ 
           backgroundImage: `url(${heroDogBg})`,
-          backgroundPosition: 'center top -40px'
+          backgroundSize: 'contain',
+          backgroundPosition: 'right center'
         }}
       />
       {/* Overlay for text readability - stronger white gradient on left */}
