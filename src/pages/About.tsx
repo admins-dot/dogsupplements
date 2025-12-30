@@ -75,13 +75,10 @@ const About = () => {
           </section>
 
           {/* Lifestyle Gallery */}
-          <section className="py-16 md:py-24 bg-[#E6D9C8]">
+          <section className="py-12 md:py-16 bg-[#E6D9C8]">
             <div className="container-wide mx-auto px-6 md:px-12 lg:px-20">
               <ScrollReveal>
                 <div className="text-center max-w-2xl mx-auto mb-12">
-                  <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
-                    Real Dogs, Real Life
-                  </span>
                   <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                     Made for <span className="text-primary">Real Life</span>
                   </h2>
