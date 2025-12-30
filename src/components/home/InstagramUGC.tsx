@@ -194,7 +194,7 @@ export const InstagramUGC = () => {
   const isMobile = useIsMobile();
 
   return (
-    <section className="py-16 md:py-20 bg-background">
+    <section className="py-16 md:py-12 bg-background">
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-10 md:mb-12">
