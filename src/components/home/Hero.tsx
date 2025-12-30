@@ -5,7 +5,7 @@ import heroDogBg from "@/assets/hero-dog-bg.png";
 
 export const Hero = () => {
   return (
-    <section className="relative overflow-hidden min-h-[90vh] lg:min-h-[85vh]">
+    <section className="relative overflow-hidden min-h-[70vh] lg:min-h-[65vh]">
       {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-no-repeat"
