@@ -19,7 +19,7 @@ export const Hero = () => {
       {/* Overlay for text readability - stronger white gradient on left */}
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 via-40% to-transparent" />
       
-      <div className="container-wide mx-auto px-6 md:px-12 lg:px-20 pt-8 md:pt-12 pb-16 md:pb-24 relative h-full flex items-center">
+      <div className="container-wide mx-auto px-6 md:px-12 lg:px-20 pt-8 md:pt-12 pb-6 md:pb-24 relative h-full flex items-center">
         {/* Mobile Layout */}
         <div className="flex flex-col lg:hidden gap-6 w-full">
           {/* Header Content with solid background */}
