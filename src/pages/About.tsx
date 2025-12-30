@@ -75,14 +75,17 @@ const About = () => {
           </section>
 
           {/* Lifestyle Gallery */}
-          <section className="py-16 md:py-24 bg-background">
+          <section className="py-16 md:py-24 bg-primary">
             <div className="container-wide mx-auto px-6 md:px-12 lg:px-20">
               <ScrollReveal>
                 <div className="text-center max-w-2xl mx-auto mb-12">
-                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                    Made for Real Life
+                  <span className="inline-block px-4 py-1.5 rounded-full bg-secondary/20 text-secondary font-medium text-sm mb-4">
+                    Real Dogs, Real Life
+                  </span>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Made for <span className="text-secondary">Real Life</span>
                   </h2>
-                  <p className="text-lg text-muted-foreground">
+                  <p className="text-lg text-white/70">
                     From morning routines to mountain trails—nutrition that keeps up with your adventures.
                   </p>
                 </div>
@@ -101,7 +104,7 @@ const About = () => {
                       </div>
                       <div className="flex items-center justify-center gap-3 mt-5">
                         <image.icon className="h-6 w-6 text-secondary" />
-                        <p className="text-foreground font-semibold text-lg">{image.caption}</p>
+                        <p className="text-white font-semibold text-lg">{image.caption}</p>
                       </div>
                     </div>
                   </ScrollReveal>
