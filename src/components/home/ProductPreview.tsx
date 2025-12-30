@@ -50,7 +50,7 @@ export const ProductPreview = () => {
   };
 
   return (
-    <section className="pt-16 md:pt-24 pb-8 md:pb-12">
+    <section className="pt-12 md:pt-16 pb-6 md:pb-10">
       <div className="container-wide mx-auto">
         <ScrollReveal className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
