@@ -362,9 +362,9 @@ const ProductDetail = () => {
               </FloatingElement>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-                {/* Product Images */}
+                {/* Product Images - Sticky on desktop */}
                 <FloatingElement delay={0.2}>
-                  <div className="relative">
+                  <div className="relative lg:sticky lg:top-24 lg:self-start">
                     {/* Like button */}
                     <motion.button
                       onClick={() => setIsLiked(!isLiked)}
