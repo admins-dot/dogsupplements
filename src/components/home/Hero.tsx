@@ -130,12 +130,12 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Product Sachet Image */}
-          <div className="flex-shrink-0 opacity-0 animate-fade-in animation-delay-400">
+          {/* Product Sachet Image - Desktop Only */}
+          <div className="flex-shrink-0 opacity-0 animate-fade-in animation-delay-400 -ml-16">
             <img 
               src={daySachet} 
               alt=".day Daily Vitality Blend sachet" 
-              className="h-[320px] w-auto object-contain drop-shadow-2xl"
+              className="h-[450px] w-auto object-contain drop-shadow-2xl"
             />
           </div>
         </div>
