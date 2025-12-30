@@ -90,6 +90,32 @@ const PostCard = ({ post }: { post: typeof posts[0] }) => (
 
 const MobileCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe) {
+      setActiveIndex((prev) => (prev + 1) % posts.length);
+    } else if (isRightSwipe) {
+      setActiveIndex((prev) => (prev - 1 + posts.length) % posts.length);
+    }
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -106,7 +132,12 @@ const MobileCarousel = () => {
   };
 
   return (
-    <div className="relative h-[480px] w-full overflow-hidden">
+    <div 
+      className="relative h-[480px] w-full overflow-hidden"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       <div className="absolute inset-0 flex items-center justify-center" style={{ perspective: "1000px" }}>
         {posts.map((post, index) => {
           const position = getPosition(index);
