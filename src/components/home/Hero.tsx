@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { HandWrittenWrapper } from "@/components/ui/hand-writing-text";
 import heroDogBg from "@/assets/hero-dog-bg.png";
+import daySachet from "@/assets/products/day-sachet.png";
 
 export const Hero = () => {
   return (
@@ -76,8 +77,10 @@ export const Hero = () => {
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden lg:flex lg:flex-col lg:justify-center lg:w-1/2 gap-8">
-          <div className="space-y-6">
+        <div className="hidden lg:flex lg:items-center lg:justify-between gap-8 w-full">
+          {/* Text Content */}
+          <div className="flex flex-col justify-center w-1/2 gap-8">
+            <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 backdrop-blur-sm rounded-full">
               <span className="w-2 h-2 bg-secondary rounded-full animate-pulse-soft" />
               <span className="text-sm font-medium text-secondary-foreground">
@@ -108,22 +111,32 @@ export const Hero = () => {
             </HandWrittenWrapper>
           </div>
 
-          {/* Quick stats */}
-          <div className="flex items-center gap-8 pt-4 opacity-0 animate-fade-in animation-delay-600">
-            <div>
-              <p className="text-2xl font-bold text-foreground">15K+</p>
-              <p className="text-sm text-muted-foreground">Happy Dogs</p>
+            {/* Quick stats */}
+            <div className="flex items-center gap-8 pt-4 opacity-0 animate-fade-in animation-delay-600">
+              <div>
+                <p className="text-2xl font-bold text-foreground">15K+</p>
+                <p className="text-sm text-muted-foreground">Happy Dogs</p>
+              </div>
+              <div className="w-px h-10 bg-border" />
+              <div>
+                <p className="text-2xl font-bold text-foreground">4.9★</p>
+                <p className="text-sm text-muted-foreground">Average Rating</p>
+              </div>
+              <div className="w-px h-10 bg-border" />
+              <div>
+                <p className="text-2xl font-bold text-foreground">100%</p>
+                <p className="text-sm text-muted-foreground">Natural</p>
+              </div>
             </div>
-            <div className="w-px h-10 bg-border" />
-            <div>
-              <p className="text-2xl font-bold text-foreground">4.9★</p>
-              <p className="text-sm text-muted-foreground">Average Rating</p>
-            </div>
-            <div className="w-px h-10 bg-border" />
-            <div>
-              <p className="text-2xl font-bold text-foreground">100%</p>
-              <p className="text-sm text-muted-foreground">Natural</p>
-            </div>
+          </div>
+
+          {/* Product Sachet Image */}
+          <div className="flex-shrink-0 opacity-0 animate-fade-in animation-delay-400">
+            <img 
+              src={daySachet} 
+              alt=".day Daily Vitality Blend sachet" 
+              className="h-[320px] w-auto object-contain drop-shadow-2xl"
+            />
           </div>
         </div>
       </div>
