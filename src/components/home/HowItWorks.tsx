@@ -20,13 +20,13 @@ const steps = [{
 
 export const HowItWorks = () => {
   return (
-    <section className="section-padding bg-warm-tan">
+    <section className="section-padding bg-primary">
       <div className="container-wide mx-auto">
         <ScrollReveal className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold mb-4 text-primary md:text-5xl">
+          <h2 className="text-3xl font-bold mb-4 text-primary-foreground md:text-5xl">
             How It Works
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-primary-foreground/70">
             Getting started is simple. Subscribe once and never worry about running out.
           </p>
         </ScrollReveal>
@@ -43,7 +43,7 @@ export const HowItWorks = () => {
               )}
               
               <div className="bg-card rounded-3xl p-8 text-center relative h-full flex flex-col items-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary text-primary-foreground mb-6">
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-secondary/20 text-secondary mb-6">
                   <step.icon className="h-8 w-8" />
                 </div>
                 
