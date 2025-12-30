@@ -135,7 +135,7 @@ export const Hero = () => {
             <img 
               src={daySachet} 
               alt=".day Daily Vitality Blend sachet" 
-              className="h-[450px] w-auto object-contain drop-shadow-2xl animate-float"
+              className="h-[450px] w-auto object-contain drop-shadow-2xl"
             />
           </div>
         </div>
