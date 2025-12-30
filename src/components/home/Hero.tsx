@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { HandWrittenWrapper } from "@/components/ui/hand-writing-text";
 import heroDogBg from "@/assets/hero-dog-bg.png";
-import heroPackets from "@/assets/hero-packets.png";
 
 export const Hero = () => {
   return (
@@ -74,15 +73,6 @@ export const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Packets overlay - desktop only */}
-        <div className="hidden lg:block absolute left-[55%] top-[55%] -translate-y-1/2 -translate-x-1/4 z-10 pointer-events-none">
-          <img 
-            src={heroPackets} 
-            alt="Daily Vitality Blend packets" 
-            className="w-[320px] h-auto drop-shadow-lg"
-          />
         </div>
 
         {/* Desktop Layout */}
