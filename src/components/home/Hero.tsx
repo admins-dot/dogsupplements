@@ -57,7 +57,7 @@ export const Hero = () => {
 
           {/* CTA & Stats */}
           <div className="space-y-8 pt-4">
-            <div className="flex flex-col sm:flex-row items-center gap-6 opacity-0 animate-fade-in animation-delay-400">
+            <div className="flex flex-col sm:flex-row items-center md:justify-center gap-6 opacity-0 animate-fade-in animation-delay-400">
               <HandWrittenWrapper strokeColor="hsl(var(--primary))" fillColor="hsl(30, 30%, 85%)">
                 <Link to="/membership" className="inline-flex items-center text-base font-semibold px-5 py-2.5 whitespace-nowrap">
                   Subscribe & Save
