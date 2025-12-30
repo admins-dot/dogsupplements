@@ -50,7 +50,7 @@ export const ProductPreview = () => {
   };
 
   return (
-    <section className="section-padding">
+    <section className="pt-16 md:pt-24 pb-8 md:pb-12">
       <div className="container-wide mx-auto">
         <ScrollReveal className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -138,16 +138,6 @@ export const ProductPreview = () => {
           </StaggerContainer>
         )}
 
-        {products.length > 0 && (
-          <ScrollReveal delay={0.3} className="text-center mt-12">
-            <Button variant="outline" size="lg" asChild>
-              <Link to="/shop">
-                View All Products
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </ScrollReveal>
-        )}
       </div>
     </section>
   );
