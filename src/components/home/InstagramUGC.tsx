@@ -47,7 +47,7 @@ export const InstagramUGC = () => {
               <Instagram className="w-5 h-5" />
               <span className="text-sm font-medium tracking-wide uppercase">Real Customers, Real Results</span>
             </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               The .day Community
             </h2>
           </div>
