@@ -144,12 +144,12 @@ const MobileCarousel = () => {
             },
             right: {
               transform: "translateX(60%) scale(0.75) rotateY(-25deg)",
-              opacity: 0.5,
+              opacity: 1,
               zIndex: 20,
             },
             left: {
               transform: "translateX(-60%) scale(0.75) rotateY(25deg)",
-              opacity: 0.5,
+              opacity: 1,
               zIndex: 20,
             },
           };
