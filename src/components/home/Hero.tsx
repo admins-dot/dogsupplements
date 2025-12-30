@@ -37,9 +37,9 @@ export const Hero = () => {
               <div className="absolute inset-0 bg-secondary/20 rounded-full blur-3xl scale-75" />
               
               <img 
-                alt=".day premium dog supplements in amber glass jar" 
+                alt="Happy healthy dog" 
                 className="relative z-10 w-full h-full object-cover rounded-3xl shadow-elevated" 
-                src="/lovable-uploads/bd5c3e76-8347-4598-8085-42623f07a2f7.png" 
+                src="/lovable-uploads/1aee8ec7-fb39-4bc1-9491-096dd1d45204.png"
               />
             </div>
           </div>
@@ -142,9 +142,9 @@ export const Hero = () => {
               <div className="absolute inset-0 bg-secondary/20 rounded-full blur-3xl scale-75" />
               
               <img 
-                alt=".day premium dog supplements in amber glass jar" 
+                alt="Happy healthy dog" 
                 className="relative z-10 w-full h-full object-cover rounded-3xl shadow-elevated" 
-                src="/lovable-uploads/bd5c3e76-8347-4598-8085-42623f07a2f7.png" 
+                src="/lovable-uploads/1aee8ec7-fb39-4bc1-9491-096dd1d45204.png"
               />
             </div>
           </div>
