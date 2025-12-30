@@ -82,7 +82,7 @@ const About = () => {
                   <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                     Made for <span className="text-primary">Real Life</span>
                   </h2>
-                  <p className="text-lg text-muted-foreground">
+                  <p className="text-lg text-muted-foreground whitespace-nowrap">
                     From morning routines to mountain trails—nutrition that keeps up with your adventures.
                   </p>
                 </div>
