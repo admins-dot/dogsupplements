@@ -11,8 +11,8 @@ export const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroDogBg})` }}
       />
-      {/* Overlay for text readability on mobile */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent lg:from-background/80 lg:via-background/40 lg:to-transparent" />
+      {/* Overlay for text readability - stronger white gradient on left */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 via-40% to-transparent" />
       
       <div className="container-wide mx-auto px-6 md:px-12 lg:px-20 pt-8 md:pt-12 pb-16 md:pb-24 relative h-full flex items-center">
         {/* Mobile Layout */}
