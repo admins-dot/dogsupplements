@@ -51,7 +51,7 @@ export const Hero = () => {
             <img 
               src={daySachet} 
               alt=".day Daily Vitality Blend sachet" 
-              className="absolute left-[25%] -translate-x-1/2 top-1/2 -translate-y-1/2 h-40 md:h-[480px] w-auto object-contain drop-shadow-xl"
+              className="absolute left-[25%] -translate-x-1/2 top-1/2 -translate-y-1/2 h-40 md:h-80 w-auto object-contain drop-shadow-xl"
             />
           </div>
 
