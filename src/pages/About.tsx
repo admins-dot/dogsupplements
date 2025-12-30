@@ -83,7 +83,7 @@ const About = () => {
                     Real Dogs, Real Life
                   </span>
                   <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                    Made for <span className="text-secondary">Real Life</span>
+                    Made for <span className="text-white">Real Life</span>
                   </h2>
                   <p className="text-lg text-muted-foreground">
                     From morning routines to mountain trails—nutrition that keeps up with your adventures.
@@ -103,7 +103,7 @@ const About = () => {
                         />
                       </div>
                       <div className="flex items-center justify-center gap-3 mt-5">
-                        <image.icon className="h-6 w-6 text-secondary" />
+                        <image.icon className="h-6 w-6 text-white" />
                         <p className="text-foreground font-semibold text-lg">{image.caption}</p>
                       </div>
                     </div>
