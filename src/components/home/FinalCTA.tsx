@@ -31,7 +31,7 @@ export const FinalCTA = () => {
                 </ScrollReveal>
                 
                 <ScrollReveal delay={0.3}>
-                  <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4 md:justify-center lg:justify-start">
                     <Button variant="hero" size="xl" asChild>
                       <Link to="/membership">
                         Subscribe &amp; Save 20%
@@ -43,7 +43,7 @@ export const FinalCTA = () => {
               </div>
 
               {/* Image - Right */}
-              <div className="w-full md:w-1/2 lg:w-2/5 p-6 md:p-8">
+              <div className="w-full md:w-1/2 lg:w-2/5 p-6 md:p-8 md:-mt-4 lg:mt-0">
                 <img 
                   src={ctaDogProduct} 
                   alt="Dog with .day Daily Vitality Blend supplement" 
