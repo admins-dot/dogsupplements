@@ -42,16 +42,16 @@ export const Hero = () => {
           </div>
 
           {/* Mobile Product Image Section */}
-          <div className="relative flex items-center justify-center opacity-0 animate-fade-in animation-delay-200">
+          <div className="relative w-full opacity-0 animate-fade-in animation-delay-200">
             <img 
               src={heroDogBg} 
               alt="Happy healthy dog" 
-              className="w-48 h-48 object-cover rounded-full"
+              className="w-full h-auto object-cover"
             />
             <img 
               src={daySachet} 
               alt=".day Daily Vitality Blend sachet" 
-              className="absolute -right-4 h-36 w-auto object-contain drop-shadow-xl"
+              className="absolute right-4 top-1/2 -translate-y-1/2 h-40 w-auto object-contain drop-shadow-xl"
             />
           </div>
 
