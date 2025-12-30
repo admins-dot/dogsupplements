@@ -175,7 +175,7 @@ const MobileCarousel = () => {
       </div>
       
       {/* Carousel indicators */}
-      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 z-40">
+      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-40">
         {posts.map((_, index) => (
           <button
             key={index}
