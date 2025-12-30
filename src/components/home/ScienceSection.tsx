@@ -1,7 +1,6 @@
 import { Heart, Bone, Shield, Brain } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ScrollReveal, StaggerContainer, StaggerItem, ScaleReveal } from "@/components/ui/scroll-reveal";
-
 const keyIngredients = [{
   icon: Heart,
   title: "Omega-3s",
@@ -19,28 +18,18 @@ const keyIngredients = [{
   title: "Lion's Mane",
   description: "Cognitive function and brain health support."
 }];
-
 export const ScienceSection = () => {
-  return (
-    <section className="section-padding">
+  return <section className="section-padding">
       <div className="container-wide mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
           <ScaleReveal className="relative">
             <div className="aspect-square rounded-3xl overflow-hidden shadow-elevated">
-              <img 
-                alt=".day product collection" 
-                className="w-full h-full object-cover" 
-                src="/lovable-uploads/6b72ec99-c054-4e54-9494-d5b6897e260b.png" 
-              />
+              <img alt=".day product collection" className="w-full h-full object-cover" src="/lovable-uploads/470eaec5-8223-43de-823c-be3f555404f7.png" />
             </div>
             
             {/* Floating card */}
-            <ScrollReveal 
-              direction="up" 
-              delay={0.3}
-              className="absolute -bottom-6 -right-6 bg-card rounded-2xl p-6 shadow-medium border border-border/50 max-w-xs"
-            >
+            <ScrollReveal direction="up" delay={0.3} className="absolute -bottom-6 -right-6 bg-card rounded-2xl p-6 shadow-medium border border-border/50 max-w-xs">
               <p className="text-sm text-muted-foreground mb-1">Trusted by</p>
               <p className="text-2xl font-bold text-foreground">15,000+</p>
               <p className="text-sm text-muted-foreground">Happy pet parents</p>
@@ -60,8 +49,7 @@ export const ScienceSection = () => {
             </ScrollReveal>
 
             <StaggerContainer className="space-y-6" staggerDelay={0.1}>
-              {keyIngredients.map((ingredient) => (
-                <StaggerItem key={ingredient.title} className="flex gap-4">
+              {keyIngredients.map(ingredient => <StaggerItem key={ingredient.title} className="flex gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center">
                     <ingredient.icon className="h-6 w-6 text-secondary" />
                   </div>
@@ -69,8 +57,7 @@ export const ScienceSection = () => {
                     <h3 className="font-semibold text-foreground mb-1">{ingredient.title}</h3>
                     <p className="text-muted-foreground">{ingredient.description}</p>
                   </div>
-                </StaggerItem>
-              ))}
+                </StaggerItem>)}
             </StaggerContainer>
 
             <ScrollReveal delay={0.4}>
@@ -81,6 +68,5 @@ export const ScienceSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
