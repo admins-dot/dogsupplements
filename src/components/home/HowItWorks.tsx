@@ -39,7 +39,7 @@ export const HowItWorks = () => {
             <StaggerItem key={step.step} className="relative h-full">
               
               <div className="bg-card rounded-3xl p-8 text-center relative h-full flex flex-col items-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-card text-secondary mb-6 shadow-md">
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-secondary/20 text-secondary mb-6">
                   <step.icon className="h-8 w-8" />
                 </div>
                 
