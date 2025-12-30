@@ -5,6 +5,7 @@ import { ScienceSection } from "@/components/home/ScienceSection";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { FlaskConical, Heart, Users, Award } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { Mountain, Coffee, Car } from "lucide-react";
 import hikeDay from "@/assets/ugc/hike-day.png";
 import pourOverDay from "@/assets/ugc/pour-over-day.png";
 import roadtripDay from "@/assets/ugc/roadtrip-day.png";
@@ -28,9 +29,9 @@ const values = [{
 }];
 
 const lifestyleImages = [
-  { src: hikeDay, alt: "Dog hiking with owner in nature", caption: "Adventure awaits" },
-  { src: pourOverDay, alt: "Morning routine with dog", caption: "Start every day right" },
-  { src: roadtripDay, alt: "Dog on a road trip", caption: "Go the distance together" },
+  { src: hikeDay, alt: "Dog hiking with owner in nature", caption: "Adventure awaits", icon: Mountain },
+  { src: pourOverDay, alt: "Morning routine with dog", caption: "Start every day right", icon: Coffee },
+  { src: roadtripDay, alt: "Dog on a road trip", caption: "Go the distance together", icon: Car },
 ];
 
 const About = () => {
@@ -85,16 +86,18 @@ const About = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 {lifestyleImages.map((image, index) => (
                   <ScrollReveal key={image.alt} delay={index * 0.15}>
-                    <div className="group relative overflow-hidden rounded-2xl aspect-[4/5]">
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                      <p className="absolute bottom-6 left-6 text-white font-medium text-lg">
-                        {image.caption}
-                      </p>
+                    <div className="group">
+                      <div className="relative overflow-hidden rounded-2xl aspect-[4/5]">
+                        <img 
+                          src={image.src} 
+                          alt={image.alt}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                      <div className="flex items-center justify-center gap-2 mt-4">
+                        <image.icon className="h-5 w-5 text-secondary" />
+                        <p className="text-foreground font-medium">{image.caption}</p>
+                      </div>
                     </div>
                   </ScrollReveal>
                 ))}
