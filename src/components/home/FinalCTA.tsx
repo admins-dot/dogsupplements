@@ -14,7 +14,7 @@ export const FinalCTA = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 via-transparent to-secondary/5" />
             <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
             
-            <div className="relative z-10 flex flex-col md:flex-row items-center">
+            <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start">
               {/* Text Content - Left */}
               <div className="flex-1 p-8 md:p-12 lg:p-16 text-left">
                 <ScrollReveal delay={0.1}>
