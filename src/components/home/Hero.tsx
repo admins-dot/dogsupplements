@@ -21,9 +21,9 @@ export const Hero = () => {
       
       <div className="container-wide mx-auto px-6 md:px-12 lg:px-20 pt-8 md:pt-12 pb-16 md:pb-24 relative h-full flex items-center">
         {/* Mobile Layout */}
-        <div className="flex flex-col lg:hidden gap-8 w-full">
-          {/* Header Content */}
-          <div className="space-y-6">
+        <div className="flex flex-col lg:hidden gap-6 w-full">
+          {/* Header Content with solid background */}
+          <div className="space-y-6 bg-background p-4 rounded-lg -mx-2">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 backdrop-blur-sm rounded-full">
               <span className="w-2 h-2 bg-secondary rounded-full animate-pulse-soft" />
               <span className="text-sm font-medium text-secondary-foreground">
@@ -39,6 +39,20 @@ export const Hero = () => {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-xl opacity-0 animate-fade-in animation-delay-200">
               Science-backed powder supplement for immunity, joints, digestion & vitality. Clean ingredients your dog deserves.
             </p>
+          </div>
+
+          {/* Mobile Product Image Section */}
+          <div className="relative flex items-center justify-center opacity-0 animate-fade-in animation-delay-200">
+            <img 
+              src={heroDogBg} 
+              alt="Happy healthy dog" 
+              className="w-48 h-48 object-cover rounded-full"
+            />
+            <img 
+              src={daySachet} 
+              alt=".day Daily Vitality Blend sachet" 
+              className="absolute -right-4 h-36 w-auto object-contain drop-shadow-xl"
+            />
           </div>
 
           {/* CTA & Stats */}
