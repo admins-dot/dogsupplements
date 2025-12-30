@@ -92,12 +92,14 @@ const About = () => {
                 {lifestyleImages.map((image, index) => (
                   <ScrollReveal key={image.alt} delay={index * 0.15}>
                     <div className="group">
-                      <div className="relative overflow-hidden rounded-2xl aspect-[4/5]">
-                        <img 
-                          src={image.src} 
-                          alt={image.alt}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
+                      <div className="relative p-2 bg-secondary rounded-2xl">
+                        <div className="overflow-hidden rounded-xl aspect-[4/5]">
+                          <img 
+                            src={image.src} 
+                            alt={image.alt}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                        </div>
                       </div>
                       <div className="flex items-center justify-center gap-3 mt-5">
                         <image.icon className="h-6 w-6 text-primary" />
