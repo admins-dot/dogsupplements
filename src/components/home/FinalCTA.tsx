@@ -43,11 +43,11 @@ export const FinalCTA = () => {
               </div>
 
               {/* Image - Right */}
-              <div className="w-full md:w-1/2 lg:w-2/5">
+              <div className="w-full md:w-1/2 lg:w-2/5 p-6 md:p-8">
                 <img 
                   src={ctaDogProduct} 
                   alt="Dog with .day Daily Vitality Blend supplement" 
-                  className="w-full h-64 md:h-full object-cover"
+                  className="w-full h-64 md:h-full object-cover rounded-2xl"
                 />
               </div>
             </div>
