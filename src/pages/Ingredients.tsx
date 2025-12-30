@@ -88,8 +88,8 @@ const Ingredients = () => {
                   key={ingredient.name}
                   className="bg-card rounded-2xl p-6 border border-border hover:border-primary/30 transition-colors"
                 >
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <IconComponent className="w-6 h-6 text-primary" />
+                  <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center mb-4">
+                    <IconComponent className="w-6 h-6 text-secondary" />
                   </div>
                   <h2 className="text-xl font-semibold text-foreground mb-2">{ingredient.name}</h2>
                   <p className="text-muted-foreground">{ingredient.benefit}</p>
