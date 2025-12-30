@@ -94,9 +94,9 @@ const About = () => {
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       </div>
-                      <div className="flex items-center justify-center gap-2 mt-4">
-                        <image.icon className="h-5 w-5 text-secondary" />
-                        <p className="text-foreground font-medium">{image.caption}</p>
+                      <div className="flex items-center justify-center gap-3 mt-5">
+                        <image.icon className="h-6 w-6 text-secondary" />
+                        <p className="text-foreground font-semibold text-lg">{image.caption}</p>
                       </div>
                     </div>
                   </ScrollReveal>
