@@ -12,7 +12,7 @@ export const Hero = () => {
         style={{ 
           backgroundImage: `url(${heroDogBg})`,
           backgroundSize: 'auto 100%',
-          backgroundPosition: '70% center'
+          backgroundPosition: 'right center'
         }}
       />
       {/* Overlay for text readability - stronger white gradient on left */}
