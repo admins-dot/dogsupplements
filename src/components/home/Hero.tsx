@@ -11,7 +11,7 @@ export const Hero = () => {
         className="absolute inset-0 bg-no-repeat"
         style={{ 
           backgroundImage: `url(${heroDogBg})`,
-          backgroundSize: 'contain',
+          backgroundSize: 'auto 100%',
           backgroundPosition: 'right center'
         }}
       />
