@@ -46,12 +46,16 @@ const About = () => {
         
         <main className="flex-1">
           {/* Hero */}
-          <section className="pt-8 pb-16 md:pb-20 bg-muted/30">
+          <section className="pt-8 pb-16 md:pb-20 bg-gradient-to-br from-secondary/20 via-muted/30 to-background">
             <div className="container-wide mx-auto px-6 md:px-12 lg:px-20">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                 <div className="space-y-6">
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/20 text-secondary font-medium text-sm">
+                    <Heart className="h-4 w-4" />
+                    Our Story
+                  </span>
                   <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-                    Our Mission: Healthier Dogs, Happier Families
+                    Our Mission: <span className="text-secondary">Healthier Dogs</span>, Happier Families
                   </h1>
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     .day was founded by pet parents and veterinary professionals 
@@ -61,7 +65,8 @@ const About = () => {
                   </p>
                 </div>
                 <div className="relative">
-                  <div className="aspect-square rounded-3xl overflow-hidden shadow-elevated">
+                  <div className="absolute -inset-4 bg-secondary/10 rounded-[2rem] -rotate-3" />
+                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-elevated">
                     <img alt="Happy healthy dog" className="w-full h-full object-cover" src="/lovable-uploads/1aee8ec7-fb39-4bc1-9491-096dd1d45204.png" />
                   </div>
                 </div>
