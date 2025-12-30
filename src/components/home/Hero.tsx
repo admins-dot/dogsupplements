@@ -7,9 +7,9 @@ import daySachet from "@/assets/products/day-sachet.png";
 export const Hero = () => {
   return (
     <section className="relative overflow-hidden min-h-[70vh] lg:min-h-[65vh]">
-      {/* Background image */}
+      {/* Background image - desktop only */}
       <div 
-        className="absolute inset-0 bg-no-repeat"
+        className="absolute inset-0 bg-no-repeat hidden lg:block"
         style={{ 
           backgroundImage: `url(${heroDogBg})`,
           backgroundSize: 'auto 100%',
