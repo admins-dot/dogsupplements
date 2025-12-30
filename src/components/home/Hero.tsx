@@ -77,11 +77,11 @@ export const Hero = () => {
         </div>
 
         {/* Packets overlay - desktop only */}
-        <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/4 z-10 pointer-events-none">
+        <div className="hidden lg:block absolute left-[55%] top-[55%] -translate-y-1/2 -translate-x-1/4 z-10 pointer-events-none">
           <img 
             src={heroPackets} 
             alt="Daily Vitality Blend packets" 
-            className="w-[320px] h-auto opacity-95 drop-shadow-lg"
+            className="w-[320px] h-auto drop-shadow-lg"
           />
         </div>
 
