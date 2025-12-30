@@ -318,7 +318,7 @@ const ProductDetail = () => {
       <div className="min-h-screen flex flex-col bg-gradient-to-b from-background via-background to-muted/30">
         <Navbar />
         
-        <main className="flex-1 relative overflow-hidden">
+        <main className="flex-1 relative">
           {/* Decorative floating elements */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <motion.div
@@ -361,10 +361,11 @@ const ProductDetail = () => {
                 </div>
               </FloatingElement>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
                 {/* Product Images - Sticky on desktop */}
-                <FloatingElement delay={0.2}>
-                  <div className="relative lg:sticky lg:top-24 lg:self-start">
+                <div className="lg:sticky lg:top-24">
+                  <FloatingElement delay={0.2}>
+                    <div className="relative">
                     {/* Like button */}
                     <motion.button
                       onClick={() => setIsLiked(!isLiked)}
@@ -426,8 +427,9 @@ const ProductDetail = () => {
                       </motion.div>
                     )}
 
-                  </div>
-                </FloatingElement>
+                    </div>
+                  </FloatingElement>
+                </div>
 
                 {/* Product Info */}
                 <div className="space-y-6">
