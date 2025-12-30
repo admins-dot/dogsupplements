@@ -22,7 +22,7 @@ export const HowItWorks = () => {
   return (
     <section className="section-padding bg-primary">
       <div className="container-wide mx-auto">
-        <ScrollReveal className="text-center max-w-2xl mx-auto mb-16">
+        <ScrollReveal className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="text-3xl font-bold mb-4 text-secondary md:text-5xl">
             How It Works
           </h2>
