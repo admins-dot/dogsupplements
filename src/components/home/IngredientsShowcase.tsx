@@ -125,8 +125,6 @@ export const IngredientsShowcase = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.4 }}
-                whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-                whileTap={{ scale: 0.98, transition: { duration: 0.1 } }}
                 className={`relative p-5 md:p-6 rounded-2xl text-left transition-all duration-300 border-2 ${
                   activeIngredient.id === ingredient.id
                     ? "border-secondary bg-card shadow-gold"
