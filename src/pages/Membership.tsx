@@ -44,7 +44,7 @@ const Membership = () => {
   };
 
   const benefits = [
-    { icon: Sparkles, title: `${MEMBERSHIP_DISCOUNT}% Off Everything`, description: 'Save on every purchase, every time' },
+    { icon: Sparkles, title: `Up to ${MEMBERSHIP_DISCOUNT}% Off Everything`, description: 'Save on every purchase, every time' },
     { icon: Truck, title: 'Free Priority Shipping', description: 'Fast delivery on all orders' },
     { icon: RefreshCcw, title: 'Easy Returns', description: '30-day hassle-free returns' },
     { icon: Shield, title: 'Member-Only Products', description: 'Access to exclusive formulas' },
