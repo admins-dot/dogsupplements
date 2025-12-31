@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ShopifyProduct, fetchProducts } from "@/lib/shopify";
 import { useCartStore, CartItem } from "@/stores/cartStore";
 import { toast } from "sonner";
-import { Loader2, ShoppingBag } from "lucide-react";
+import { Loader2, ShoppingBag, Star } from "lucide-react";
 import heroProduct from "@/assets/hero-product.jpg";
 
 const Shop = () => {
@@ -112,7 +112,13 @@ const Shop = () => {
                       style={{ animationDelay: `${index * 50}ms` }}
                     >
                       {/* Image */}
-                      <Link to={`/product/${product.node.handle}`} className="block aspect-square overflow-hidden">
+                      <Link to={`/product/${product.node.handle}`} className="block aspect-square overflow-hidden relative">
+                        {product.node.handle === 'daily-essential-vitamin' && (
+                          <div className="absolute top-3 left-3 z-10 px-2.5 py-1 bg-secondary text-secondary-foreground rounded-full shadow-gold flex items-center gap-1.5">
+                            <Star className="h-3 w-3 fill-current" />
+                            <span className="text-xs font-semibold">Best Seller</span>
+                          </div>
+                        )}
                         <img
                           src={product.node.images.edges[0]?.node.url || heroProduct}
                           alt={product.node.images.edges[0]?.node.altText || product.node.title}
