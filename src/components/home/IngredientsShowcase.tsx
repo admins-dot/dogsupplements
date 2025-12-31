@@ -11,8 +11,8 @@ const ingredients = [
     title: "Omega-3s",
     tagline: "Skin & Coat",
     description: "Wild-caught fish oil for a lustrous coat, healthy skin, and reduced inflammation throughout the body.",
-    color: "from-rose-500/20 to-orange-500/20",
-    iconColor: "text-rose-500",
+    color: "from-secondary/20 to-secondary/10",
+    iconColor: "text-secondary",
     benefits: ["Shiny coat", "Healthy skin", "Anti-inflammatory"],
   },
   {
@@ -21,8 +21,8 @@ const ingredients = [
     title: "Collagen & Green-Lipped Mussel",
     tagline: "Joint Support",
     description: "Naturally sourced glucosamine and chondroitin for flexible joints and pain-free movement.",
-    color: "from-amber-500/20 to-yellow-500/20",
-    iconColor: "text-amber-500",
+    color: "from-secondary/25 to-secondary/15",
+    iconColor: "text-secondary",
     benefits: ["Joint mobility", "Reduced stiffness", "Cartilage support"],
   },
   {
@@ -31,8 +31,8 @@ const ingredients = [
     title: "Probiotics & Antioxidants",
     tagline: "Gut & Immunity",
     description: "Powerful blend supporting digestive health, nutrient absorption, and immune system strength.",
-    color: "from-emerald-500/20 to-teal-500/20",
-    iconColor: "text-emerald-500",
+    color: "from-secondary/20 to-secondary/10",
+    iconColor: "text-secondary",
     benefits: ["Gut health", "Strong immunity", "Better digestion"],
   },
   {
@@ -41,8 +41,8 @@ const ingredients = [
     title: "Lion's Mane",
     tagline: "Brain Health",
     description: "Premium mushroom extract supporting cognitive function, focus, and healthy aging.",
-    color: "from-violet-500/20 to-purple-500/20",
-    iconColor: "text-violet-500",
+    color: "from-secondary/25 to-secondary/15",
+    iconColor: "text-secondary",
     benefits: ["Mental clarity", "Cognitive support", "Healthy aging"],
   },
 ];
