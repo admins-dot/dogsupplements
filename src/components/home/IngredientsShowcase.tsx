@@ -261,42 +261,6 @@ export const IngredientsShowcase = () => {
           </motion.div>
         </div>
 
-        {/* Bottom stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
-        >
-          {[
-            { value: "100%", label: "Human-Grade" },
-            { value: "0", label: "Artificial Additives" },
-            { value: "4+", label: "Key Ingredients" },
-            { value: "15,000+", label: "Happy Dogs" },
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 + index * 0.1 }}
-              whileHover={{ y: -4 }}
-              className="text-center p-6 rounded-2xl bg-card/50 border border-border/50"
-            >
-              <motion.p
-                className="text-3xl md:text-4xl font-bold text-secondary mb-1"
-                initial={{ scale: 0.5 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 + index * 0.1, type: "spring" }}
-              >
-                {stat.value}
-              </motion.p>
-              <p className="text-sm text-muted-foreground">{stat.label}</p>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );
