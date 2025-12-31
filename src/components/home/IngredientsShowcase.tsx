@@ -52,7 +52,7 @@ export const IngredientsShowcase = () => {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 relative overflow-hidden">
+    <section className="pt-8 md:pt-12 pb-16 md:pb-24 px-6 md:px-12 lg:px-20 relative overflow-hidden">
       {/* Animated background gradients */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
