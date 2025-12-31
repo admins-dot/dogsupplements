@@ -5,7 +5,7 @@ const steps = [{
   icon: FlaskConical,
   step: "01",
   title: "Pick Your Style",
-  description: "Same premium powder—stickpacks for on-the-go or scoop for home."
+  description: "Same premium powder—stick packs for on-the-go or scoop for home."
 }, {
   icon: Repeat,
   step: "02",
