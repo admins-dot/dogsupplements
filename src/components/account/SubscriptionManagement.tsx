@@ -181,7 +181,7 @@ export const SubscriptionManagement = () => {
               <Package className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
               <h4 className="text-lg font-medium text-foreground mb-2">No active subscriptions</h4>
               <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-                Subscribe to your favorite products and save 20% on every delivery. 
+                Subscribe to your favorite products and save up to 20% on every delivery. 
                 Never run out of your dog's essential supplements!
               </p>
               <Button variant="gold" onClick={() => navigate('/shop')}>

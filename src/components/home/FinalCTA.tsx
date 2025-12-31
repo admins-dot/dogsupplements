@@ -34,7 +34,7 @@ export const FinalCTA = () => {
                   <div className="flex flex-col sm:flex-row gap-4 md:hidden lg:flex">
                     <Button variant="hero" size="xl" asChild>
                       <Link to="/membership">
-                        Subscribe &amp; Save 20%
+                        Subscribe &amp; Save Up To 20%
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </Link>
                     </Button>
@@ -53,7 +53,7 @@ export const FinalCTA = () => {
                 <div className="hidden md:flex lg:hidden mt-6">
                   <Button variant="hero" size="xl" asChild>
                     <Link to="/membership">
-                      Subscribe &amp; Save 20%
+                      Subscribe &amp; Save Up To 20%
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </Button>
