@@ -126,7 +126,7 @@ export const ProductPreview = () => {
                         ${parseFloat(product.node.priceRange.minVariantPrice.amount).toFixed(2)}
                       </p>
                       <p className="text-xs text-secondary font-medium">
-                        Subscribe & save 20%
+                        Subscribe & save up to 20%
                       </p>
                     </div>
                     
