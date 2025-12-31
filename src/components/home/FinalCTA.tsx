@@ -18,13 +18,13 @@ export const FinalCTA = () => {
               {/* Text Content - Left */}
               <div className="flex-1 px-6 py-10 sm:px-10 md:p-12 lg:p-16 text-left">
                 <ScrollReveal delay={0.1}>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-5 leading-tight text-balance">
                     Start Your Dog's Health Journey Today
                   </h2>
                 </ScrollReveal>
                 
                 <ScrollReveal delay={0.2}>
-                  <p className="text-lg text-muted-foreground mb-8 max-w-xl">
+                  <p className="text-base sm:text-lg text-muted-foreground mb-7 max-w-xl leading-relaxed">
                     Join thousands of pet parents who've transformed their dog's health with 
                     our science-backed daily nutrition. Subscribe now and see the difference.
                   </p>
