@@ -125,9 +125,6 @@ export const ProductPreview = () => {
                       <p className="text-lg font-bold text-foreground">
                         ${parseFloat(product.node.priceRange.minVariantPrice.amount).toFixed(2)}
                       </p>
-                      <p className="text-xs text-secondary font-medium">
-                        Subscribe & save up to 20%
-                      </p>
                     </div>
                     
                     <Button
