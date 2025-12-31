@@ -371,11 +371,7 @@ const ProductDetail = () => {
                         <CarouselContent>
                           {product.node.images.edges.map((image, index) => (
                             <CarouselItem key={index}>
-                              <motion.div 
-                                className="aspect-square rounded-3xl overflow-hidden shadow-elevated bg-muted relative"
-                                whileHover={{ scale: 1.02 }}
-                                transition={{ duration: 0.3 }}
-                              >
+                              <div className="aspect-square rounded-3xl overflow-hidden shadow-elevated bg-muted relative">
                                 {/* Shimmer effect on load */}
                                 {!imageLoaded && (
                                   <div className="absolute inset-0 animate-shimmer" />
@@ -386,7 +382,7 @@ const ProductDetail = () => {
                                   className="w-full h-full object-cover"
                                   onLoad={() => setImageLoaded(true)}
                                 />
-                              </motion.div>
+                              </div>
                             </CarouselItem>
                           ))}
                         </CarouselContent>
@@ -394,11 +390,7 @@ const ProductDetail = () => {
                         <CarouselNext className="right-4" />
                       </Carousel>
                     ) : (
-                      <motion.div 
-                        className="aspect-square rounded-3xl overflow-hidden shadow-elevated bg-muted relative"
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ duration: 0.3 }}
-                      >
+                      <div className="aspect-square rounded-3xl overflow-hidden shadow-elevated bg-muted relative">
                         {!imageLoaded && (
                           <div className="absolute inset-0 animate-shimmer" />
                         )}
@@ -408,7 +400,7 @@ const ProductDetail = () => {
                           className="w-full h-full object-cover"
                           onLoad={() => setImageLoaded(true)}
                         />
-                      </motion.div>
+                      </div>
                     )}
 
                     {/* Best Seller badge - only on stick pack */}
