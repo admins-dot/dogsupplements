@@ -16,7 +16,7 @@ export const FinalCTA = () => {
             
             <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start">
               {/* Text Content - Left */}
-              <div className="flex-1 p-6 px-8 md:p-12 lg:p-16 text-left">
+              <div className="flex-1 px-10 py-8 md:p-12 lg:p-16 text-left">
                 <ScrollReveal delay={0.1}>
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
                     Start Your Dog's Health Journey Today
