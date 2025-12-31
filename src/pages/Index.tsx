@@ -7,7 +7,7 @@ import { InstagramUGC } from "@/components/home/InstagramUGC";
 import { HowItWorks } from "@/components/home/HowItWorks";
 import { ProductPreview } from "@/components/home/ProductPreview";
 
-import { ScienceSection } from "@/components/home/ScienceSection";
+import { IngredientsShowcase } from "@/components/home/IngredientsShowcase";
 import { FinalCTA } from "@/components/home/FinalCTA";
 
 const Index = () => {
@@ -48,7 +48,7 @@ const Index = () => {
           <TrustBadges />
           <HowItWorks />
           <ProductPreview />
-          <ScienceSection />
+          <IngredientsShowcase />
           
           <FinalCTA />
         </main>
