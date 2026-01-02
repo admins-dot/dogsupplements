@@ -8,6 +8,7 @@ import { HowItWorks } from "@/components/home/HowItWorks";
 import { ProductPreview } from "@/components/home/ProductPreview";
 
 import { IngredientsShowcase } from "@/components/home/IngredientsShowcase";
+import { StatsBar } from "@/components/home/StatsBar";
 import { FinalCTA } from "@/components/home/FinalCTA";
 
 const Index = () => {
@@ -49,7 +50,7 @@ const Index = () => {
           <HowItWorks />
           <ProductPreview />
           <IngredientsShowcase />
-          
+          <StatsBar />
           <FinalCTA />
         </main>
 

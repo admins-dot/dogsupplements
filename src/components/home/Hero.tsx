@@ -55,8 +55,8 @@ export const Hero = () => {
             />
           </div>
 
-          {/* CTA & Stats */}
-          <div className="space-y-8 pt-4">
+          {/* CTA */}
+          <div className="pt-4">
             <div className="flex flex-col sm:flex-row items-center md:justify-center gap-6 opacity-0 animate-fade-in animation-delay-400">
               <HandWrittenWrapper strokeColor="hsl(var(--primary))" fillColor="hsl(30, 30%, 85%)">
                 <Link to="/membership" className="inline-flex items-center text-base font-semibold px-5 py-2.5 whitespace-nowrap">
@@ -68,24 +68,6 @@ export const Hero = () => {
                   Shop One-Time
                 </Link>
               </HandWrittenWrapper>
-            </div>
-
-            {/* Quick stats */}
-            <div className="flex items-center justify-center gap-6 opacity-0 animate-fade-in animation-delay-600">
-              <div className="text-center">
-                <p className="text-2xl font-bold text-foreground">15K+</p>
-                <p className="text-sm text-muted-foreground">Happy Dogs</p>
-              </div>
-              <div className="w-px h-10 bg-border" />
-              <div className="text-center">
-                <p className="text-2xl font-bold text-foreground">4.9★</p>
-                <p className="text-sm text-muted-foreground">Average Rating</p>
-              </div>
-              <div className="w-px h-10 bg-border" />
-              <div className="text-center">
-                <p className="text-2xl font-bold text-foreground">100%</p>
-                <p className="text-sm text-muted-foreground">Natural</p>
-              </div>
             </div>
           </div>
         </div>
@@ -124,24 +106,6 @@ export const Hero = () => {
               </Link>
             </HandWrittenWrapper>
           </div>
-
-            {/* Quick stats */}
-            <div className="flex items-center gap-8 pt-4 opacity-0 animate-fade-in animation-delay-600">
-              <div>
-                <p className="text-2xl font-bold text-foreground">15K+</p>
-                <p className="text-sm text-muted-foreground">Happy Dogs</p>
-              </div>
-              <div className="w-px h-10 bg-border" />
-              <div>
-                <p className="text-2xl font-bold text-foreground">4.9★</p>
-                <p className="text-sm text-muted-foreground">Average Rating</p>
-              </div>
-              <div className="w-px h-10 bg-border" />
-              <div>
-                <p className="text-2xl font-bold text-foreground">100%</p>
-                <p className="text-sm text-muted-foreground">Natural</p>
-              </div>
-            </div>
           </div>
 
           {/* Product Sachet Image - Desktop Only */}
